@@ -3,6 +3,7 @@ package com.Mrbysco.RDT.items;
 import java.util.List;
 
 import com.Mrbysco.RDT.RDTReference;
+import com.Mrbysco.RDT.RandomDecorativeThings;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumDyeColor;
@@ -20,6 +21,7 @@ public class ItemWoolbit extends Item{
 		this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setCreativeTab(CreativeTabs.MATERIALS);
+        this.setCreativeTab(RandomDecorativeThings.tabRDT);
 	}
 	
 	public String getUnlocalizedName(ItemStack stack)

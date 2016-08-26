@@ -22,6 +22,8 @@ public class RandomDecorativeThings
 	@SidedProxy(clientSide = RDTReference.CLIENT_PROXY_CLASS, serverSide = RDTReference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
+	public static final RDTTab tabRDT = new RDTTab("tabRDT");
+	
     @EventHandler
     public void PreInit(FMLPreInitializationEvent event)
     {
