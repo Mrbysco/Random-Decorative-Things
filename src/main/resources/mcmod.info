@@ -1,0 +1,15 @@
+[
+{
+  "modid": "RDT",
+  "name": "Random Decorative Things",
+  "description": "Just some random decorative things.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mrbysco"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
