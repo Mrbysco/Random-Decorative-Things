@@ -20,7 +20,6 @@ public class ItemWoolbit extends Item{
 		setRegistryName(RDTReference.RDTItems.WOOLBIT.getRegistryName());
 		this.setHasSubtypes(true);
         this.setMaxDamage(0);
-        this.setCreativeTab(CreativeTabs.MATERIALS);
         this.setCreativeTab(RandomDecorativeThings.tabRDT);
 	}
 	
