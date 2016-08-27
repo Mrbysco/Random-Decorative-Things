@@ -18,7 +18,6 @@ public class RDTTab extends CreativeTabs{
 	}
 	
 	public RDTTab setCreativeTab(RDTTab tabRDT) {
-		// TODO Auto-generated method stub
 		return null;
 }
 
