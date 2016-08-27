@@ -1,3 +1,5 @@
+itemGroup.tabRDT=Random Decorative Things
+
 item.woolbit.black.name=Black Wool Bit
 item.woolbit.red.name=Red Wool Bit
 item.woolbit.green.name=Green Wool Bit
@@ -14,3 +16,5 @@ item.woolbit.lightBlue.name=Light Blue Wool Bit
 item.woolbit.magenta.name=Magenta Wool Bit
 item.woolbit.orange.name=Orange Wool Bit
 item.woolbit.white.name=White Wool Bit
+
+tile.lawnmower.name=Lawnmower

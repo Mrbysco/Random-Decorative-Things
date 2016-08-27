@@ -29,4 +29,24 @@ public class RDTReference {
 			return registryName;
 		}
 	}
+	
+	public static enum RDTBlocks {
+		LAWNMOWER("lawnmower", "BlockLawnMower");
+		
+		private String unlocalisedName;
+		private String registryName;
+		
+		RDTBlocks(String unlocalisedName, String registryName) {
+			this.unlocalisedName = unlocalisedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalisedName() {
+			return unlocalisedName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
 }
