@@ -1,22 +1,30 @@
 package com.Mrbysco.RDT.blocks;
 
+import java.util.List;
+
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.RandomDecorativeThings;
+import com.sun.jna.platform.unix.X11;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockLawnmower extends BlockHorizontal{
 
+	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 2, 0, 0.0625 * 3, 0.0625 * 15, 0.0625 * 6, 0.0625 * 14);
+	
 	public BlockLawnmower() {
 		super(Material.CLOTH);
 		setUnlocalizedName(RDTReference.RDTBlocks.LAWNMOWER.getUnlocalisedName());
@@ -79,5 +87,17 @@ public class BlockLawnmower extends BlockHorizontal{
     protected BlockStateContainer createBlockState()
     {
         return new BlockStateContainer(this, new IProperty[] {FACING});
+    }
+    
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
+    {
+        return BOUNDING_BOX;
+    }
+    
+    @Override
+    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox,
+    		List<AxisAlignedBB> collidingBoxes, Entity entityIn) {
+    	super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn);
     }
 }
