@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 
 public class BlockLawnmower extends BlockHorizontal{
 
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 2, 0, 0.0625 * 3, 0.0625 * 15, 0.0625 * 6, 0.0625 * 14);
+	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 1, 0, 0.0625 * 2, 0.0625 * 15, 0.0625 * 6, 0.0625 * 14);
 	
 	public BlockLawnmower() {
 		super(Material.CLOTH);
