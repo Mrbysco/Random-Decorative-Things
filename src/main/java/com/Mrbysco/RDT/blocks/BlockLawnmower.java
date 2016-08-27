@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.RandomDecorativeThings;
-import com.sun.jna.platform.unix.X11;
 
 import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
@@ -33,6 +33,7 @@ public class BlockLawnmower extends BlockHorizontal{
 		this.setLightOpacity(0);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setHardness(1.0F);
+		this.setSoundType(SoundType.CLOTH);
 	}
 	
 	public boolean isFullCube(IBlockState state)
