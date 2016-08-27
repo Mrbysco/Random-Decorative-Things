@@ -309,28 +309,28 @@
 },
 {
     "__comment": "MiddleSideMetal1",
-    "from": [ 3, 0.8125, 5 ],
-    "to": [ 4, 1.8125, 9.5 ],
+    "from": [ 3.5, 0.8125, 5 ],
+    "to": [ 4, 1.8125, 10 ],
     "faces": {
-        "down":  { "uv": [ 13, 9.5, 12, 5 ], "texture": "#hardened_clay_stained_red" },
-        "up":    { "uv": [ 3, 5, 4, 9.5 ], "texture": "#hardened_clay_stained_red" },
-        "north": { "uv": [ 12, 14.1875, 13, 15.1875 ], "texture": "#hardened_clay_stained_red" },
-        "south": { "uv": [ 3, 14.1875, 4, 15.1875 ], "texture": "#hardened_clay_stained_red" },
-        "west":  { "uv": [ 5, 14.1875, 9.5, 15.1875 ], "texture": "#hardened_clay_stained_red" },
-        "east":  { "uv": [ 6.5, 14.1875, 11, 15.1875 ], "texture": "#hardened_clay_stained_red" }
+        "down":  { "uv": [ 12.5, 10, 12, 5 ], "texture": "#hardened_clay_stained_red" },
+        "up":    { "uv": [ 3.5, 5, 4, 10 ], "texture": "#hardened_clay_stained_red" },
+        "north": { "uv": [ 12, 14.1875, 12.5, 15.1875 ], "texture": "#hardened_clay_stained_red" },
+        "south": { "uv": [ 3.5, 14.1875, 4, 15.1875 ], "texture": "#hardened_clay_stained_red" },
+        "west":  { "uv": [ 5, 14.1875, 10, 15.1875 ], "texture": "#hardened_clay_stained_red" },
+        "east":  { "uv": [ 6, 14.1875, 11, 15.1875 ], "texture": "#hardened_clay_stained_red" }
     }
 },
 {
     "__comment": "MiddleSideMetal2",
     "from": [ 12, 0.8125, 5 ],
-    "to": [ 13, 1.8125, 9.5 ],
+    "to": [ 12.5, 1.8125, 10 ],
     "faces": {
-        "down":  { "uv": [ 4, 9.5, 3, 5 ], "texture": "#hardened_clay_stained_red" },
-        "up":    { "uv": [ 12, 5, 13, 9.5 ], "texture": "#hardened_clay_stained_red" },
-        "north": { "uv": [ 3, 14.1875, 4, 15.1875 ], "texture": "#hardened_clay_stained_red" },
-        "south": { "uv": [ 12, 14.1875, 13, 15.1875 ], "texture": "#hardened_clay_stained_red" },
-        "west":  { "uv": [ 5, 14.1875, 9.5, 15.1875 ], "texture": "#hardened_clay_stained_red" },
-        "east":  { "uv": [ 6.5, 14.1875, 11, 15.1875 ], "texture": "#hardened_clay_stained_red" }
+        "down":  { "uv": [ 4, 10, 3.5, 5 ], "texture": "#hardened_clay_stained_red" },
+        "up":    { "uv": [ 12, 5, 12.5, 10 ], "texture": "#hardened_clay_stained_red" },
+        "north": { "uv": [ 3.5, 14.1875, 4, 15.1875 ], "texture": "#hardened_clay_stained_red" },
+        "south": { "uv": [ 12, 14.1875, 12.5, 15.1875 ], "texture": "#hardened_clay_stained_red" },
+        "west":  { "uv": [ 5, 14.1875, 10, 15.1875 ], "texture": "#hardened_clay_stained_red" },
+        "east":  { "uv": [ 6, 14.1875, 11, 15.1875 ], "texture": "#hardened_clay_stained_red" }
     }
 },
 {

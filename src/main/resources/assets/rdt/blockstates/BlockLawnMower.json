@@ -1,8 +1,8 @@
 {
     "variants": {
-        "facing=north": { "model": "rdt:BlockLawnMower" },
-        "facing=south": { "model": "rdt:BlockLawnMower", "y": 180 },
-        "facing=west":  { "model": "rdt:BlockLawnMower", "y": 270 },
-        "facing=east":  { "model": "rdt:BlockLawnMower", "y": 90 }
+        "facing=north": { "model": "rdt:BlockLawnmower" },
+        "facing=south": { "model": "rdt:BlockLawnmower", "y": 180 },
+        "facing=west":  { "model": "rdt:BlockLawnmower", "y": 270 },
+        "facing=east":  { "model": "rdt:BlockLawnmower", "y": 90 }
     }
 }

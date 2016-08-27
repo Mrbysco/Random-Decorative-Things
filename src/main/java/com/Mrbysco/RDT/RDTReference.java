@@ -31,7 +31,7 @@ public class RDTReference {
 	}
 	
 	public static enum RDTBlocks {
-		LAWNMOWER("lawnmower", "BlockLawnMower");
+		LAWNMOWER("lawnmower", "BlockLawnmower");
 		
 		private String unlocalisedName;
 		private String registryName;
