@@ -26,9 +26,9 @@ public class RDTBlocks {
 	
 	private static void registerBlock(Block block) {
 		GameRegistry.register(block);
-		ItemBlock item = new ItemBlock(block);
-		item.setRegistryName(block.getRegistryName());
-		GameRegistry.register(item);
+		Item ItemBlock = new ItemBlock(block);
+		ItemBlock.setRegistryName(block.getRegistryName());
+		GameRegistry.register(ItemBlock);
 	}
 	
 	public static void registerRenders()
