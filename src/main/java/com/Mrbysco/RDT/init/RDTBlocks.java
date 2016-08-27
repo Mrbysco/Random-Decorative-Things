@@ -24,11 +24,16 @@ public class RDTBlocks {
 		registerBlock(lawnmower);
 	}
 	
-	private static void registerBlock(Block block) {
+	public static void registerBlock(Block block) 
+	{
+		registerBlock(block, new ItemBlock(block));
+	}
+	
+	public static void registerBlock(Block block, ItemBlock item) 
+	{
 		GameRegistry.register(block);
-		Item ItemBlock = new ItemBlock(block);
-		ItemBlock.setRegistryName(block.getRegistryName());
-		GameRegistry.register(ItemBlock);
+		item.setRegistryName(block.getRegistryName());
+		GameRegistry.register(item);
 	}
 	
 	public static void registerRenders()
@@ -38,6 +43,6 @@ public class RDTBlocks {
 	
 	public static void registerRender(Block block)
 	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(RDTReference.MOD_ID + ":" + block.getRegistryName(), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(RDTReference.MOD_ID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
 	}
 }

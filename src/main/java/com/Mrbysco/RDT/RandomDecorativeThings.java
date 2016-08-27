@@ -29,8 +29,8 @@ public class RandomDecorativeThings
     public void PreInit(FMLPreInitializationEvent event)
     {		
     	RDTItems.init();
-    	RDTItems.register();
     	RDTBlocks.init();
+    	RDTItems.register();
     	RDTBlocks.register();
     	RDTRecipes.register();
     	
