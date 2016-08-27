@@ -1,5 +1,7 @@
 package com.Mrbysco.RDT.init;
 
+import java.util.Locale;
+
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.blocks.BlockLawnmower;
 
@@ -43,6 +45,6 @@ public class RDTBlocks {
 	
 	public static void registerRender(Block block)
 	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(RDTReference.MOD_ID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(RDTReference.MOD_ID + ":" + block.getUnlocalizedName().substring(5).toLowerCase(Locale.US), "inventory"));
 	}
 }

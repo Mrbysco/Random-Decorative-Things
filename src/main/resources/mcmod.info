@@ -1,6 +1,6 @@
 [
 {
-  "modid": "RDT",
+  "modid": "rdt",
   "name": "Random Decorative Things",
   "description": "Just some random decorative things.",
   "version": "${version}",
