@@ -5,7 +5,6 @@ public class RDTReference {
 	public static final String MOD_NAME = "Random Decorative Things";
 	public static final String VERSION = "0.0.1";
 	public static final String ACCEPTED_VERSIONS = "[1.10.2]";
-	public static final String DEPENDENCIES = "after:miab;";
 			
 	public static final String CLIENT_PROXY_CLASS = "com.Mrbysco.RDT.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.Mrbysco.RDT.proxy.ServerProxy";
@@ -31,7 +30,8 @@ public class RDTReference {
 	}
 	
 	public static enum RDTBlocks {
-		LAWNMOWER("lawnmower", "BlockLawnmower");
+		LAWNMOWER("lawnmower", "BlockLawnmower"),
+		TOYCASTLE("toycastle", "BlockToyCastle");
 		
 		private String unlocalisedName;
 		private String registryName;

@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.blocks.BlockLawnmower;
+import com.Mrbysco.RDT.blocks.BlockToyCastle;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -15,15 +16,18 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class RDTBlocks {
 	
 	public static Block lawnmower;
+	public static Block toycastle;
 	
 	public static void init()
 	{
 		lawnmower = new BlockLawnmower();
+		toycastle = new BlockToyCastle();
 	}
 	
 	public static void register()
 	{
 		registerBlock(lawnmower);
+		registerBlock(toycastle);
 	}
 	
 	public static void registerBlock(Block block) 
@@ -41,6 +45,7 @@ public class RDTBlocks {
 	public static void registerRenders()
 	{
 		registerRender(lawnmower);
+		registerRender(toycastle);
 	}
 	
 	public static void registerRender(Block block)
