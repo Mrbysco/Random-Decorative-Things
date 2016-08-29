@@ -1,36 +1,57 @@
 package com.Mrbysco.RDT.init;
 
 import com.Mrbysco.RDT.RDTReference;
+import com.Mrbysco.RDT.items.ItemClaybit;
+import com.Mrbysco.RDT.items.ItemIronHammer;
+import com.Mrbysco.RDT.items.ItemStoneHammer;
+import com.Mrbysco.RDT.items.ItemStonebit;
 import com.Mrbysco.RDT.items.ItemWoolbit;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class RDTItems {
 	
 	public static Item woolbit;
-	
+	public static Item claybit;
+	public static Item stonebit;
+	public static Item stonehammer;
+	public static Item ironhammer;
+		
 	public static void init()
 	{
 		woolbit = new ItemWoolbit();
+		claybit = new ItemClaybit();
+		stonebit = new ItemStonebit();
+		stonehammer = new ItemStoneHammer(ToolMaterial.STONE);
+		ironhammer = new ItemIronHammer(ToolMaterial.IRON);
 	}
 	
 	public static void register()
 	{
 		GameRegistry.register(woolbit);
+		GameRegistry.register(claybit);
+		GameRegistry.register(stonebit);
+		GameRegistry.register(stonehammer);
+		GameRegistry.register(ironhammer);
 	}
 	
 	public static void registerRenders()
 	{
-		
+		registerRender(stonebit);
+		registerRender(stonehammer);
+		registerRender(ironhammer);
 	}
 	
 	public static void registerRender(Item item)
 	{		
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(RDTReference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(RDTReference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 	
 	public static void registerRenderMetadata()
@@ -51,5 +72,22 @@ public class RDTItems {
 		ModelLoader.setCustomModelResourceLocation(woolbit, 13, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemWoolbit_magenta", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(woolbit, 14, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemWoolbit_orange", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(woolbit, 15, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemWoolbit_white", "inventory"));
+		
+		ModelLoader.setCustomModelResourceLocation(claybit, 0, new ModelResourceLocation(RDTReference.MOD_ID +  ":" + "ItemClaybit_black", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 1, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_red", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 2, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_green", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 3, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_brown", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 4, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_blue", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 5, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_purple", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 6, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_cyan", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 7, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_lightGray", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 8, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_gray", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 9, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_pink", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 10, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_lime", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 11, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_yellow", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 12, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_lightBlue", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 13, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_magenta", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 14, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_orange", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(claybit, 15, new ModelResourceLocation(RDTReference.MOD_ID + ":" + "ItemClaybit_white", "inventory"));
 	}
 }

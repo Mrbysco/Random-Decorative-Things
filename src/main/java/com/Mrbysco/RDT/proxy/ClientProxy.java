@@ -15,6 +15,7 @@ public class ClientProxy implements CommonProxy {
 	@Override
 	public void Preinit() {
 		RDTItems.registerRenderMetadata();
+		RDTItems.registerRenders();
 		RDTBlocks.registerRenders();
 	}
 

@@ -32,6 +32,7 @@ public class RandomDecorativeThings
     	RDTBlocks.init();
     	RDTItems.register();
     	RDTBlocks.register();
+    	
     	RDTRecipes.register();
     	
     	proxy.Preinit();

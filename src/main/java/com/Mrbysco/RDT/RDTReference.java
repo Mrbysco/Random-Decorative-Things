@@ -10,7 +10,12 @@ public class RDTReference {
 	public static final String SERVER_PROXY_CLASS = "com.Mrbysco.RDT.proxy.ServerProxy";
 	
 	public static enum RDTItems {
-		WOOLBIT("woolbit", "ItemWoolbit");
+		WOOLBIT("woolbit", "ItemWoolbit"),
+		CLAYBIT("claybit", "ItemClaybit"),
+		STONEBIT("stonebit", "ItemStonebit"),
+		STONEHAMMER("stonehammer", "ItemStoneHammer"),
+		IRONHAMMER("ironhammer", "ItemIronHammer");
+		
 		
 		private String unlocalisedName;
 		private String registryName;
