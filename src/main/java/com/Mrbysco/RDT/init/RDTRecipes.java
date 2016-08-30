@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class RDTRecipes {
 	
@@ -50,44 +51,25 @@ public class RDTRecipes {
 		OreDictionary.registerOre("bithammer", new ItemStack(RDTItems.ironhammer));
 		
 		//Clay into claybits
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 15), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 14), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 13), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 12), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 11), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 10), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 9), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 8), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 7), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 6), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 5), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 4), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 3), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 2), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 1), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14), 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 0), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 'M', new ItemStack(RDTItems.stonehammer));
-		
-		//temporary duplicate for iron hammer
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 15), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 14), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 13), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 12), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 11), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 10), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 9), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 8), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 7), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 6), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 5), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 4), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 3), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 2), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 1), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14), 'M', new ItemStack(RDTItems.ironhammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.claybit, 8, 0), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 'M', new ItemStack(RDTItems.ironhammer));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 15)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 14)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 13)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 12)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 11)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 10)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 9)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 8)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 7)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 6)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 5)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 4)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 3)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 2)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 1)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14), 'M', "bithammer"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 0)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 'M', "bithammer"));
 		
 		//Stone into stonebits
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.stonebit, 8), "WM", 'W', Blocks.STONE, 'M', new ItemStack(RDTItems.stonehammer));
-		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.stonebit, 8), "WM", 'W', Blocks.STONE, 'M', new ItemStack(RDTItems.ironhammer));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.stonebit, 8)), "WM", 'W', Blocks.STONE, 'M', "bithammer"));
 		
 		//recipe for the Hammers
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.stonehammer, 1), " G ", "GS ", " S ", 'G', Blocks.COBBLESTONE, 'S', Items.STICK);

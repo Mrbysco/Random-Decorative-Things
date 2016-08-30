@@ -17,5 +17,27 @@ item.woolbit.magenta.name=Magenta Wool Bit
 item.woolbit.orange.name=Orange Wool Bit
 item.woolbit.white.name=White Wool Bit
 
+item.claybit.black.name=Black Clay Bit
+item.claybit.red.name=Red Clay Bit
+item.claybit.green.name=Green Clay Bit
+item.claybit.brown.name=Brown Clay Bit
+item.claybit.blue.name=Blue Clay Bit
+item.claybit.purple.name=Purple Clay Bit
+item.claybit.cyan.name=Cyan Clay Bit
+item.claybit.silver.name=Light Gray Clay Bit
+item.claybit.gray.name=Gray Clay Bit
+item.claybit.pink.name=Pink Clay Bit
+item.claybit.lime.name=Lime Clay Bit
+item.claybit.yellow.name=Yellow Clay Bit
+item.claybit.lightBlue.name=Light Blue Clay Bit
+item.claybit.magenta.name=Magenta Clay Bit
+item.claybit.orange.name=Orange Clay Bit
+item.claybit.white.name=White Clay Bit
+
+item.stonebit.name=Stone Bit
+
+item.stonehammer.name=Stone Hammer
+item.ironhammer.name=Iron Hammer
+
 tile.lawnmower.name=Lawnmower
 tile.toycastle.name=Toy Castle
