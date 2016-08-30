@@ -2,34 +2,58 @@ package com.Mrbysco.RDT.init;
 
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.items.ItemClaybit;
+import com.Mrbysco.RDT.items.ItemFlintSaw;
 import com.Mrbysco.RDT.items.ItemIronHammer;
+import com.Mrbysco.RDT.items.ItemIronSaw;
 import com.Mrbysco.RDT.items.ItemStoneHammer;
 import com.Mrbysco.RDT.items.ItemStonebit;
 import com.Mrbysco.RDT.items.ItemWoolbit;
+import com.Mrbysco.RDT.items.woodbits.ItemAcaciaBit;
+import com.Mrbysco.RDT.items.woodbits.ItemBigOakBit;
+import com.Mrbysco.RDT.items.woodbits.ItemBirchBit;
+import com.Mrbysco.RDT.items.woodbits.ItemJungleBit;
+import com.Mrbysco.RDT.items.woodbits.ItemOakBit;
+import com.Mrbysco.RDT.items.woodbits.ItemSpruceBit;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class RDTItems {
 	
 	public static Item woolbit;
 	public static Item claybit;
 	public static Item stonebit;
+	
+	public static Item oakbit;
+	public static Item bigoakbit;
+	public static Item birchbit;
+	public static Item sprucebit;
+	public static Item acaciabit;
+	public static Item junglebit;
+	
 	public static Item stonehammer;
 	public static Item ironhammer;
+	public static Item flintsaw;
+	public static Item ironsaw;
 		
 	public static void init()
 	{
 		woolbit = new ItemWoolbit();
 		claybit = new ItemClaybit();
 		stonebit = new ItemStonebit();
+		oakbit = new ItemOakBit();
+		bigoakbit = new ItemBigOakBit();
+		birchbit = new ItemBirchBit();
+		sprucebit = new ItemSpruceBit();
+		acaciabit = new ItemAcaciaBit();
+		junglebit = new ItemJungleBit();
 		stonehammer = new ItemStoneHammer(ToolMaterial.STONE);
 		ironhammer = new ItemIronHammer(ToolMaterial.IRON);
+		flintsaw = new ItemFlintSaw(ToolMaterial.STONE);
+		ironsaw = new ItemIronSaw(ToolMaterial.IRON);
 	}
 	
 	public static void register()
@@ -37,15 +61,31 @@ public class RDTItems {
 		GameRegistry.register(woolbit);
 		GameRegistry.register(claybit);
 		GameRegistry.register(stonebit);
+		GameRegistry.register(oakbit);
+		GameRegistry.register(bigoakbit);
+		GameRegistry.register(birchbit);
+		GameRegistry.register(sprucebit);
+		GameRegistry.register(acaciabit);
+		GameRegistry.register(junglebit);
 		GameRegistry.register(stonehammer);
 		GameRegistry.register(ironhammer);
+		GameRegistry.register(flintsaw);
+		GameRegistry.register(ironsaw);
 	}
 	
 	public static void registerRenders()
 	{
 		registerRender(stonebit);
+		registerRender(oakbit);
+		registerRender(bigoakbit);
+		registerRender(birchbit);
+		registerRender(sprucebit);
+		registerRender(acaciabit);
+		registerRender(junglebit);
 		registerRender(stonehammer);
 		registerRender(ironhammer);
+		registerRender(flintsaw);
+		registerRender(ironsaw);
 	}
 	
 	public static void registerRender(Item item)

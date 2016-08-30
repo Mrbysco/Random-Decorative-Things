@@ -14,7 +14,15 @@ public class RDTReference {
 		CLAYBIT("claybit", "ItemClaybit"),
 		STONEBIT("stonebit", "ItemStonebit"),
 		STONEHAMMER("stonehammer", "ItemStoneHammer"),
-		IRONHAMMER("ironhammer", "ItemIronHammer");
+		IRONHAMMER("ironhammer", "ItemIronHammer"),
+		FLINTSAW("flintsaw", "ItemFlintSaw"),
+		IRONSAW("ironsaw", "ItemIronSaw"),
+		OAKBIT("oakbit", "ItemOakBit"),
+		BIGOAKBIT("bigoakbit", "ItemBigOakBit"),
+		BIRCHBIT("birchbit", "ItemBirchBit"),
+		JUNGLEBIT("junglebit", "ItemJungleBit"),
+		ACACIABIT("acaciabit", "ItemAcaciaBit"),
+		SPRUCEBIT("sprucebit", "ItemSpruceBit");
 		
 		
 		private String unlocalisedName;
@@ -36,7 +44,13 @@ public class RDTReference {
 	
 	public static enum RDTBlocks {
 		LAWNMOWER("lawnmower", "BlockLawnmower"),
-		TOYCASTLE("toycastle", "BlockToyCastle");
+		TOYCASTLE("toycastle", "BlockToyCastle"),
+		OAKCRATE("oakcrate", "BlockCrateOak"),
+		BIRCHCRATE("birchcrate", "BlockCrateBirch"),
+		SPRUCECRATE("sprucecrate", "BlockCrateSpruce"),
+		JUNGLECRATE("junglecrate", "BlockCrateJungle"),
+		ACACIACRATE("acaciacrate", "BlockCrateAcacia"),
+		BIGOAKCRATE("bigoakcrate", "BlockCrateBigOak");
 		
 		private String unlocalisedName;
 		private String registryName;

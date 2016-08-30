@@ -1,8 +1,11 @@
 package com.Mrbysco.RDT.init;
 
-import java.util.Locale;
-
-import com.Mrbysco.RDT.RDTReference;
+import com.Mrbysco.RDT.blocks.BlockCrateAcacia;
+import com.Mrbysco.RDT.blocks.BlockCrateBigOak;
+import com.Mrbysco.RDT.blocks.BlockCrateBirch;
+import com.Mrbysco.RDT.blocks.BlockCrateJungle;
+import com.Mrbysco.RDT.blocks.BlockCrateOak;
+import com.Mrbysco.RDT.blocks.BlockCrateSpruce;
 import com.Mrbysco.RDT.blocks.BlockLawnmower;
 import com.Mrbysco.RDT.blocks.BlockToyCastle;
 
@@ -17,17 +20,35 @@ public class RDTBlocks {
 	
 	public static Block lawnmower;
 	public static Block toycastle;
+	public static Block acaciacrate;
+	public static Block bigoakcrate;
+	public static Block birchcrate;
+	public static Block junglecrate;
+	public static Block oakcrate;
+	public static Block sprucecrate;
 	
 	public static void init()
 	{
 		lawnmower = new BlockLawnmower();
 		toycastle = new BlockToyCastle();
+		acaciacrate = new BlockCrateAcacia();
+		bigoakcrate = new BlockCrateBigOak();
+		birchcrate = new BlockCrateBirch();
+		junglecrate = new BlockCrateJungle();
+		oakcrate = new BlockCrateOak();
+		sprucecrate = new BlockCrateSpruce();
 	}
 	
 	public static void register()
 	{
 		registerBlock(lawnmower);
 		registerBlock(toycastle);
+		registerBlock(acaciacrate);
+		registerBlock(bigoakcrate);
+		registerBlock(birchcrate);
+		registerBlock(junglecrate);
+		registerBlock(oakcrate);
+		registerBlock(sprucecrate);
 	}
 	
 	public static void registerBlock(Block block) 
@@ -46,6 +67,12 @@ public class RDTBlocks {
 	{
 		registerRender(lawnmower);
 		registerRender(toycastle);
+		registerRender(acaciacrate);
+		registerRender(bigoakcrate);
+		registerRender(birchcrate);
+		registerRender(junglecrate);
+		registerRender(oakcrate);
+		registerRender(sprucecrate);
 	}
 	
 	public static void registerRender(Block block)

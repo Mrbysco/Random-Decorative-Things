@@ -36,8 +36,23 @@ item.claybit.white.name=White Clay Bit
 
 item.stonebit.name=Stone Bit
 
+item.oakbit.name=Oak Bit
+item.bigoakbit.name=Big Oak Bit
+item.birchbit.name=Birch Bit
+item.sprucebit.name=Spruce Bit
+item.acaciabit.name=Acacia Bit
+item.junglebit.name=Jungle Bit
+
 item.stonehammer.name=Stone Hammer
 item.ironhammer.name=Iron Hammer
+item.flintsaw.name=Flint Saw
+item.ironsaw.name=Iron Saw
 
 tile.lawnmower.name=Lawnmower
 tile.toycastle.name=Toy Castle
+tile.oakcrate.name=Oak Crate
+tile.birchcrate.name=Birch Crate
+tile.sprucecrate.name=Spruce Crate
+tile.junglecrate.name=Jungle Crate
+tile.acaciacrate.name=Acacia Crate
+tile.bigoakcrate.name=Big Oak Crate

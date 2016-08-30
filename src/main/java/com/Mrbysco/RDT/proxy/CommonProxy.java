@@ -1,8 +1,25 @@
 package com.Mrbysco.RDT.proxy;
 
-public interface CommonProxy {
+import com.Mrbysco.RDT.RDTReference;
+import com.Mrbysco.RDT.gui.GuiProxy;
 
-	public void init();
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
-	public void Preinit();
+public class CommonProxy {
+
+	public void init(FMLInitializationEvent e) {
+        NetworkRegistry.INSTANCE.registerGuiHandler(RDTReference.MOD_ID, new GuiProxy());
+    }
+
+
+	public void Preinit() {
+		
+	}
+
+
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
 }

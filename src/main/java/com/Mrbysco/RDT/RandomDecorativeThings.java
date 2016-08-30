@@ -3,6 +3,7 @@ package com.Mrbysco.RDT;
 import com.Mrbysco.RDT.init.RDTBlocks;
 import com.Mrbysco.RDT.init.RDTItems;
 import com.Mrbysco.RDT.init.RDTRecipes;
+import com.Mrbysco.RDT.init.RDTTileEntities;
 import com.Mrbysco.RDT.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -42,6 +43,7 @@ public class RandomDecorativeThings
     public void init(FMLInitializationEvent event)
     {
     	proxy.init();
+    	RDTTileEntities.init();
     }
     
     @EventHandler

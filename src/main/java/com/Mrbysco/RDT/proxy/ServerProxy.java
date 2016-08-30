@@ -1,6 +1,6 @@
 package com.Mrbysco.RDT.proxy;
 
-public class ServerProxy implements CommonProxy {
+public class ServerProxy extends CommonProxy {
 	
 	@Override
 	public void init() {

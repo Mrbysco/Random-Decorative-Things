@@ -49,6 +49,8 @@ public class RDTRecipes {
 		//Add hammers to their own kind
 		OreDictionary.registerOre("bithammer", new ItemStack(RDTItems.stonehammer));
 		OreDictionary.registerOre("bithammer", new ItemStack(RDTItems.ironhammer));
+		OreDictionary.registerOre("bitsaw", new ItemStack(RDTItems.flintsaw));
+		OreDictionary.registerOre("bitsaw", new ItemStack(RDTItems.ironsaw));
 		
 		//Clay into claybits
 		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 15)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), 'M', "bithammer"));
@@ -68,11 +70,36 @@ public class RDTRecipes {
 		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 1)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14), 'M', "bithammer"));
 		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 0)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 'M', "bithammer"));
 		
-		//Stone into stonebits
-		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.stonebit, 8)), "WM", 'W', Blocks.STONE, 'M', "bithammer"));
+		//Wood into woodbits
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.oakbit, 8)), "WM", 'W', new ItemStack(Blocks.PLANKS, 1, 0), 'M', "bitsaw"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.bigoakbit, 8)), "WM", 'W', new ItemStack(Blocks.PLANKS, 1, 5), 'M', "bitsaw"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.birchbit, 8)), "WM", 'W', new ItemStack(Blocks.PLANKS, 1, 2), 'M', "bitsaw"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.acaciabit, 8)), "WM", 'W', new ItemStack(Blocks.PLANKS, 1, 4), 'M', "bitsaw"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.sprucebit, 8)), "WM", 'W', new ItemStack(Blocks.PLANKS, 1, 1), 'M', "bitsaw"));
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.junglebit, 8)), "WM", 'W', new ItemStack(Blocks.PLANKS, 1, 3), 'M', "bitsaw"));
 		
-		//recipe for the Hammers
+		//Stone into stonebits
+		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.stonebit, 8)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 0), 'M', "bithammer"));
+		
+		//recipe for the Hammers and Saw
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.stonehammer, 1), " G ", "GS ", " S ", 'G', Blocks.COBBLESTONE, 'S', Items.STICK);
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.ironhammer, 1), " G ", "GS ", " S ", 'G', Items.IRON_INGOT, 'S', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.flintsaw, 1), " S ", "SG ", " S ", 'G', Items.FLINT, 'S', Items.STICK);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.ironsaw, 1), " S ", "SG ", " S ", 'G', Items.IRON_INGOT, 'S', Items.STICK);
+		
+		//Recipe for the blocks 
+		
+		//crates
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakcrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 0), 'B', RDTItems.oakbit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.bigoakcrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 5), 'B', RDTItems.bigoakbit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchcrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 2), 'B', RDTItems.birchbit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciacrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 4), 'B', RDTItems.acaciabit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucecrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 1), 'B', RDTItems.sprucebit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglecrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 3), 'B', RDTItems.junglebit);
+		
+		//Toy castle
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.toycastle, 1), "RRR", "GGG", "GYG", 'R', new ItemStack(RDTItems.woolbit, 1, 1), 'G', new ItemStack(RDTItems.woolbit, 1, 7), 'Y', new ItemStack(RDTItems.woolbit, 1, 11));
+		//Lawnmower
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.lawnmower, 1), "  B", "RGR", "WRW", 'B', new ItemStack(RDTItems.woolbit, 1, 0), 'R', new ItemStack(RDTItems.claybit, 1, 1), 'G', new ItemStack(RDTItems.claybit, 1, 8), 'W', new ItemStack(RDTItems.woolbit, 1, 15));
 	}
 }
