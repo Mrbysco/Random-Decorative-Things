@@ -9,8 +9,8 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -18,7 +18,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockCrateBase extends Block implements ITileEntityProvider{
 	
@@ -28,7 +27,7 @@ public class BlockCrateBase extends Block implements ITileEntityProvider{
 		super(Material.WOOD);
 		this.setCreativeTab(RandomDecorativeThings.tabRDT);
 		this.setLightOpacity(0);
-		this.setHardness(1.0F);
+		this.setHardness(3.0F);
 		this.setSoundType(SoundType.WOOD);
 	}
 
@@ -44,8 +43,8 @@ public class BlockCrateBase extends Block implements ITileEntityProvider{
         if (world.isRemote) {
             return true;
         }
-        TileEntity te = world.getTileEntity(pos);
-        if (!(te instanceof TileEntityCrate)) {
+        TileEntity tileentity = world.getTileEntity(pos);
+        if (!(tileentity instanceof TileEntityCrate)) {
             return false;
         }
         player.openGui(RDTReference.MOD_ID, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
@@ -63,4 +62,16 @@ public class BlockCrateBase extends Block implements ITileEntityProvider{
     {
         return false;
     }
+	
+	@Override
+	public void breakBlock(World world, BlockPos pos, IBlockState state)
+	{
+		TileEntity tileEntity = world.getTileEntity(pos);
+		if (tileEntity instanceof IInventory)
+		{
+			IInventory inv = (IInventory) tileEntity;
+			InventoryHelper.dropInventoryItems(world, pos, inv);
+		}
+		super.breakBlock(world, pos, state);
+}
 }
