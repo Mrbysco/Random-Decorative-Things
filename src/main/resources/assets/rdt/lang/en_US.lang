@@ -50,9 +50,17 @@ item.ironsaw.name=Iron Saw
 
 tile.lawnmower.name=Lawnmower
 tile.toycastle.name=Toy Castle
+
 tile.oakcrate.name=Oak Crate
 tile.birchcrate.name=Birch Crate
 tile.sprucecrate.name=Spruce Crate
 tile.junglecrate.name=Jungle Crate
 tile.acaciacrate.name=Acacia Crate
 tile.bigoakcrate.name=Big Oak Crate
+
+tile.oakbarrel.name=Oak Barrel
+tile.birchbarrel.name=Birch Barrel
+tile.sprucebarrel.name=Spruce Barrel
+tile.junglebarrel.name=Jungle Barrel
+tile.acaciabarrel.name=Acacia Barrel
+tile.bigoakbarrel.name=Big Oak Barrel

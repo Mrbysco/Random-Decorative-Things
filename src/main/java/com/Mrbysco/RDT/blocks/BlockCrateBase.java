@@ -14,14 +14,15 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityDispenser;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockCrateBase extends Block implements ITileEntityProvider{
+public class BlockCrateBase extends Block /*implements ITileEntityProvider*/{
 	
-	public static final int GUI_ID = 1;
+	//public static final int GUI_ID = 1;
 
 	public BlockCrateBase() {
 		super(Material.WOOD);
@@ -31,7 +32,8 @@ public class BlockCrateBase extends Block implements ITileEntityProvider{
 		this.setSoundType(SoundType.WOOD);
 	}
 
-    @Override
+    /*
+	@Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileEntityCrate();
     }
@@ -50,6 +52,7 @@ public class BlockCrateBase extends Block implements ITileEntityProvider{
         player.openGui(RDTReference.MOD_ID, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
         return true;
     }
+	*/
 	
 	@Override
 	public boolean isFullCube(IBlockState state)
@@ -62,16 +65,4 @@ public class BlockCrateBase extends Block implements ITileEntityProvider{
     {
         return false;
     }
-	
-	@Override
-	public void breakBlock(World world, BlockPos pos, IBlockState state)
-	{
-		TileEntity tileEntity = world.getTileEntity(pos);
-		if (tileEntity instanceof IInventory)
-		{
-			IInventory inv = (IInventory) tileEntity;
-			InventoryHelper.dropInventoryItems(world, pos, inv);
-		}
-		super.breakBlock(world, pos, state);
-}
 }

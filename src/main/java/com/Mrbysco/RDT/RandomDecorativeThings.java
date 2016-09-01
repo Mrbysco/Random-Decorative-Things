@@ -43,7 +43,9 @@ public class RandomDecorativeThings
     public void init(FMLInitializationEvent event)
     {
     	proxy.init();
-    	RDTTileEntities.init();
+    	
+    	//Temporarily disabled
+    	//RDTTileEntities.init();
     }
     
     @EventHandler

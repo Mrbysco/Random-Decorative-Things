@@ -97,6 +97,13 @@ public class RDTRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucecrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 1), 'B', RDTItems.sprucebit);
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglecrate, 1), "BSB", "S S", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 3), 'B', RDTItems.junglebit);
 		
+		//crates
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakbarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 0), 'B', RDTItems.oakbit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.bigoakbarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 5), 'B', RDTItems.bigoakbit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchbarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 2), 'B', RDTItems.birchbit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 4), 'B', RDTItems.acaciabit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 1), 'B', RDTItems.sprucebit);
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 3), 'B', RDTItems.junglebit);
 		//Toy castle
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.toycastle, 1), "RRR", "GGG", "GYG", 'R', new ItemStack(RDTItems.woolbit, 1, 1), 'G', new ItemStack(RDTItems.woolbit, 1, 7), 'Y', new ItemStack(RDTItems.woolbit, 1, 11));
 		//Lawnmower

@@ -11,7 +11,7 @@ public class ClientProxy extends CommonProxy{
 	
 	@Override
 	public void init() {
-        NetworkRegistry.INSTANCE.registerGuiHandler(RDTReference.MOD_ID, new GuiProxy());
+        //NetworkRegistry.INSTANCE.registerGuiHandler(RDTReference.MOD_ID, new GuiProxy());
 		//RDTItems.registerRenders();
 		//RDTBlocks.registerRenders();
 	}

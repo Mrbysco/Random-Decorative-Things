@@ -246,9 +246,9 @@
 },
 {
     "__comment": "DiagonalLine7",
-    "from": [ 0, 0, 0.5 ],
-    "to": [ 1, 1, 21 ],
-    "rotation": { "origin": [ 0, 1, 0.5 ], "axis": "x", "angle": -45 },
+    "from": [ 0.0625, 0.0043125, 0.5 ],
+    "to": [ 1.0625, 1.00431, 21 ],
+    "rotation": { "origin": [ 0.0625, 1.00431, 0.5 ], "axis": "x", "angle": -45 },
     "faces": {
         "down":  { "uv": [ 9, 16, 8, 0 ], "texture": "#texture" },
         "up":    { "uv": [ 7, 0, 8, 16 ], "texture": "#texture" },

@@ -50,7 +50,13 @@ public class RDTReference {
 		SPRUCECRATE("sprucecrate", "BlockCrateSpruce"),
 		JUNGLECRATE("junglecrate", "BlockCrateJungle"),
 		ACACIACRATE("acaciacrate", "BlockCrateAcacia"),
-		BIGOAKCRATE("bigoakcrate", "BlockCrateBigOak");
+		BIGOAKCRATE("bigoakcrate", "BlockCrateBigOak"),
+		OAKBARREL("oakbarrel", "BlockBarrelOak"),
+		BIRCHBARREL("birchbarrel", "BlockBarrelBirch"),
+		SPRUCEBARREL("sprucebarrel", "BlockBarrelSpruce"),
+		JUNGLEBARREL("junglebarrel", "BlockBarrelJungle"),
+		ACACIABARREL("acaciabarrel", "BlockBarrelAcacia"),
+		BIGOAKBARREL("bigoakbarrel", "BlockBarrelBigOak");
 		
 		private String unlocalisedName;
 		private String registryName;
