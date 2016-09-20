@@ -56,7 +56,8 @@ public class RDTReference {
 		SPRUCEBARREL("sprucebarrel", "BlockBarrelSpruce"),
 		JUNGLEBARREL("junglebarrel", "BlockBarrelJungle"),
 		ACACIABARREL("acaciabarrel", "BlockBarrelAcacia"),
-		BIGOAKBARREL("bigoakbarrel", "BlockBarrelBigOak");
+		BIGOAKBARREL("bigoakbarrel", "BlockBarrelBigOak"),
+		STRAWBERRYCAKE("strawberrycake", "BlockStrawberryCake");
 		
 		private String unlocalisedName;
 		private String registryName;
