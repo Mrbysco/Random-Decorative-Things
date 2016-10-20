@@ -29,10 +29,10 @@ public class RandomDecorativeThings
     @EventHandler
     public void PreInit(FMLPreInitializationEvent event)
     {		
-    	RDTItems.init();
     	RDTBlocks.init();
-    	RDTItems.register();
     	RDTBlocks.register();
+    	RDTItems.init();
+    	RDTItems.register();
     	
     	RDTRecipes.register();
     	

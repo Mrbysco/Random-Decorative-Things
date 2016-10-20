@@ -108,5 +108,7 @@ public class RDTRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.toycastle, 1), "RRR", "GGG", "GYG", 'R', new ItemStack(RDTItems.woolbit, 1, 1), 'G', new ItemStack(RDTItems.woolbit, 1, 7), 'Y', new ItemStack(RDTItems.woolbit, 1, 11));
 		//Lawnmower
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.lawnmower, 1), "  B", "RGR", "WRW", 'B', new ItemStack(RDTItems.woolbit, 1, 0), 'R', new ItemStack(RDTItems.claybit, 1, 1), 'G', new ItemStack(RDTItems.claybit, 1, 8), 'W', new ItemStack(RDTItems.woolbit, 1, 15));
+		//Cake
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.strawberrycake, 1), " R ", "WWW", "OOO", 'O', new ItemStack(RDTItems.claybit, 1, 14), 'W', new ItemStack(RDTItems.claybit, 1, 15), 'R', new ItemStack(RDTItems.claybit, 1, 1));
 	}
 }
