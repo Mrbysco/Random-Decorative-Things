@@ -9,4 +9,4 @@ Random Decorative Things was an idea I got after wanting to make more decorative
   - [![License](https://img.shields.io/badge/License-MIT-red.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 ## Downloads ##
-There aren't any downloads yet.
+Downloads can be found on CurseForge at https://minecraft.curseforge.com/projects/random-decorative-things
