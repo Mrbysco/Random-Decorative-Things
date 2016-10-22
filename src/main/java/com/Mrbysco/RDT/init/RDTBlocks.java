@@ -9,6 +9,12 @@ import com.Mrbysco.RDT.blocks.barrels.BlockBarrelBirch;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelJungle;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelOak;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelSpruce;
+import com.Mrbysco.RDT.blocks.bookshelf.BlockBookshelfAcacia;
+import com.Mrbysco.RDT.blocks.bookshelf.BlockBookshelfBigOak;
+import com.Mrbysco.RDT.blocks.bookshelf.BlockBookshelfBirch;
+import com.Mrbysco.RDT.blocks.bookshelf.BlockBookshelfJungle;
+import com.Mrbysco.RDT.blocks.bookshelf.BlockBookshelfOak;
+import com.Mrbysco.RDT.blocks.bookshelf.BlockBookshelfSpruce;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateAcacia;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateBigOak;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateBirch;
@@ -27,18 +33,28 @@ public class RDTBlocks {
 	
 	public static Block lawnmower;
 	public static Block toycastle;
+	
 	public static Block acaciacrate;
 	public static Block bigoakcrate;
 	public static Block birchcrate;
 	public static Block junglecrate;
 	public static Block oakcrate;
 	public static Block sprucecrate;
+	
 	public static Block acaciabarrel;
 	public static Block bigoakbarrel;
 	public static Block birchbarrel;
 	public static Block junglebarrel;
 	public static Block oakbarrel;
 	public static Block sprucebarrel;
+	
+	public static Block acaciabookshelf;
+	public static Block bigoakbookshelf;
+	public static Block birchbookshelf;
+	public static Block junglebookshelf;
+	public static Block oakbookshelf;
+	public static Block sprucebookshelf;
+	
 	public static Block strawberrycake;
 	
 	public static void init()
@@ -59,6 +75,13 @@ public class RDTBlocks {
 		junglebarrel = new BlockBarrelJungle();
 		oakbarrel = new BlockBarrelOak();
 		sprucebarrel = new BlockBarrelSpruce();
+		
+		acaciabookshelf = new BlockBookshelfAcacia();
+		bigoakbookshelf = new BlockBookshelfBigOak();
+		birchbookshelf = new BlockBookshelfBirch();
+		junglebookshelf = new BlockBookshelfJungle();
+		oakbookshelf = new BlockBookshelfOak();
+		sprucebookshelf = new BlockBookshelfSpruce();
 		
 		strawberrycake = new BlockStrawberryCake();
 	}
@@ -81,6 +104,13 @@ public class RDTBlocks {
 		registerBlock(junglebarrel);
 		registerBlock(oakbarrel);
 		registerBlock(sprucebarrel);
+		
+		registerBlock(acaciabookshelf);
+		registerBlock(bigoakbookshelf);
+		registerBlock(birchbookshelf);
+		registerBlock(junglebookshelf);
+		registerBlock(oakbookshelf);
+		registerBlock(sprucebookshelf);
 		
 		registerBlock(strawberrycake);
 	}
@@ -116,6 +146,13 @@ public class RDTBlocks {
 		registerRender(oakbarrel);
 		registerRender(sprucebarrel);
 
+		registerRender(acaciabookshelf);
+		registerRender(bigoakbookshelf);
+		registerRender(birchbookshelf);
+		registerRender(junglebookshelf);
+		registerRender(oakbookshelf);
+		registerRender(sprucebookshelf);
+		
 		registerRender(strawberrycake);
 	}
 	

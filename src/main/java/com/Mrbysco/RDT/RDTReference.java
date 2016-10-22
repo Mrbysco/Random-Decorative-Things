@@ -45,18 +45,28 @@ public class RDTReference {
 	public static enum RDTBlocks {
 		LAWNMOWER("lawnmower", "BlockLawnmower"),
 		TOYCASTLE("toycastle", "BlockToyCastle"),
+		
 		OAKCRATE("oakcrate", "BlockCrateOak"),
 		BIRCHCRATE("birchcrate", "BlockCrateBirch"),
 		SPRUCECRATE("sprucecrate", "BlockCrateSpruce"),
 		JUNGLECRATE("junglecrate", "BlockCrateJungle"),
 		ACACIACRATE("acaciacrate", "BlockCrateAcacia"),
 		BIGOAKCRATE("bigoakcrate", "BlockCrateBigOak"),
+		
 		OAKBARREL("oakbarrel", "BlockBarrelOak"),
 		BIRCHBARREL("birchbarrel", "BlockBarrelBirch"),
 		SPRUCEBARREL("sprucebarrel", "BlockBarrelSpruce"),
 		JUNGLEBARREL("junglebarrel", "BlockBarrelJungle"),
 		ACACIABARREL("acaciabarrel", "BlockBarrelAcacia"),
 		BIGOAKBARREL("bigoakbarrel", "BlockBarrelBigOak"),
+		
+		OAKBOOKSHELF("oakbookshelf", "BlockBookshelfOak"),
+		BIRCHBOOKSHELF("birchbookshelf", "BlockBookshelfBirch"),
+		SPRUCEBOOKSHELF("sprucebookshelf", "BlockBookshelfSpruce"),
+		JUNGLEBOOKSHELF("junglebookshelf", "BlockBookshelfJungle"),
+		ACACIABOOKSHELF("acaciabookshelf", "BlockBookshelfAcacia"),
+		BIGOAKBOOKSHELF("bigoakbookshelf", "BlockBookshelfBigOak"),
+		
 		STRAWBERRYCAKE("strawberrycake", "BlockStrawberryCake");
 		
 		private String unlocalisedName;

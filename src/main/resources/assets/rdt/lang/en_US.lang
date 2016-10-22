@@ -65,4 +65,11 @@ tile.junglebarrel.name=Jungle Barrel
 tile.acaciabarrel.name=Acacia Barrel
 tile.bigoakbarrel.name=Big Oak Barrel
 
+tile.oakbookshelf.name=Oak Bookshelf
+tile.birchbookshelf.name=Birch Bookshelf
+tile.sprucebookshelf.name=Spruce Bookshelf
+tile.junglebookshelf.name=Jungle Bookshelf
+tile.acaciabookshelf.name=Acacia Bookshelf
+tile.bigoakbookshelf.name=Big Oak Bookshelf
+
 tile.strawberrycake.name=Strawberry Cake
