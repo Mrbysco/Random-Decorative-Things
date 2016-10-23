@@ -2,6 +2,7 @@ package com.Mrbysco.RDT.init;
 
 import com.Mrbysco.RDT.RandomDecorativeThings;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -10,7 +11,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class RDTRecipes {
-	
 	public static void register() {
 		
 		if(RandomDecorativeThings.isQuarkInstalled){
@@ -145,11 +145,13 @@ public class RDTRecipes {
 			RandomDecorativeThings.logger.info("Changing Bookshelf Recipe For Compatability");	
 			//Quark Compatability recipe
 			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakbookshelf, 1), "B", 'B', new ItemStack(Blocks.BOOKSHELF, 1, 0));
-			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.bigoakbookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 4));
-			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchbookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 1));
-			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 3));
-			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 0));
-			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 2));
+			
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.bigoakbookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.oakbookshelf, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchbookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.bigoakbookshelf, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.birchbookshelf, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.acaciabookshelf, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.junglebookshelf, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakbookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.junglebookshelf, 1));
 			RandomDecorativeThings.logger.info("Compatability Changes Finished");	
 		}
 		else
