@@ -150,7 +150,7 @@ public class RDTRecipes {
 			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchbookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.bigoakbookshelf, 1));
 			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.birchbookshelf, 1));
 			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.acaciabookshelf, 1));
-			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.junglebookshelf, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.sprucebookshelf, 1));
 			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakbookshelf, 1), "B", 'B', new ItemStack(RDTBlocks.junglebookshelf, 1));
 			RandomDecorativeThings.logger.info("Compatability Changes Finished");	
 		}
