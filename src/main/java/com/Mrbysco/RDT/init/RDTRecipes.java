@@ -1,15 +1,45 @@
 package com.Mrbysco.RDT.init;
 
+import com.Mrbysco.RDT.RandomDecorativeThings;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class RDTRecipes {
 	
+	@ObjectHolder("quark:custom_bookshelf")
+	public static final Item custom_bookshelf = null;
+	
 	public static void register() {
+		if(RandomDecorativeThings.isQuarkInstalled){
+			RandomDecorativeThings.logger.info("Changing Woolbit recipe For Compatability");	
+			//Quark Compatability recipe
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 15)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 0), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 14)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 1), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 13)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 2), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 12)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 3), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 11)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 4), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 10)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 5), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 9)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 6), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 8)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 7), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 7)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 8), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 6)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 9), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 5)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 10), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 4)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 11), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 3)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 12), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 2)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 13), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 1)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 14), 'M', "bitsaw"));
+			GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.woolbit, 8, 0)), "WM", 'W', new ItemStack(Blocks.WOOL, 1, 15), 'M', "bitsaw"));
+			RandomDecorativeThings.logger.info("Compatability Changes Finished");	
+		}
+		else
+		{
 		//Wool into woolbits
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.woolbit, 8, 15), "W", 'W', new ItemStack(Blocks.WOOL, 1, 0));
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.woolbit, 8, 14), "W", 'W', new ItemStack(Blocks.WOOL, 1, 1));
@@ -27,6 +57,8 @@ public class RDTRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.woolbit, 8, 2), "W", 'W', new ItemStack(Blocks.WOOL, 1, 13));
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.woolbit, 8, 1), "W", 'W', new ItemStack(Blocks.WOOL, 1, 14));
 		GameRegistry.addShapedRecipe(new ItemStack(RDTItems.woolbit, 8, 0), "W", 'W', new ItemStack(Blocks.WOOL, 1, 15));
+		}
+		
 		
 		//woolbits into Wool (revert method)
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.WOOL, 1, 0), "WWW","W W","WWW", 'W', new ItemStack(RDTItems.woolbit, 8, 15));
@@ -51,6 +83,14 @@ public class RDTRecipes {
 		OreDictionary.registerOre("bithammer", new ItemStack(RDTItems.ironhammer));
 		OreDictionary.registerOre("bitsaw", new ItemStack(RDTItems.flintsaw));
 		OreDictionary.registerOre("bitsaw", new ItemStack(RDTItems.ironsaw));
+		
+		//Add bookshelves to oredict
+		OreDictionary.registerOre("bookshelf_acacia", new ItemStack(RDTBlocks.acaciabookshelf));
+		OreDictionary.registerOre("bookshelf_bigoak", new ItemStack(RDTBlocks.bigoakbookshelf));
+		OreDictionary.registerOre("bookshelf_birch", new ItemStack(RDTBlocks.birchbookshelf));
+		OreDictionary.registerOre("bookshelf_jungle", new ItemStack(RDTBlocks.junglebookshelf));
+		OreDictionary.registerOre("bookshelf_oak", new ItemStack(RDTBlocks.oakbookshelf));
+		OreDictionary.registerOre("bookshelf_spruce", new ItemStack(RDTBlocks.sprucebookshelf));
 		
 		//Clay into claybits
 		GameRegistry.addRecipe(new ShapedOreRecipe((new ItemStack(RDTItems.claybit, 8, 15)), "WM", 'W', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), 'M', "bithammer"));
@@ -104,6 +144,29 @@ public class RDTRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 4), 'B', RDTItems.acaciabit);
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 1), 'B', RDTItems.sprucebit);
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebarrel, 1), "BSB", "B B", "BSB", 'S', new ItemStack(Blocks.WOODEN_SLAB, 1, 3), 'B', RDTItems.junglebit);
+		
+		if(RandomDecorativeThings.isQuarkInstalled){
+			RandomDecorativeThings.logger.info("Changing Bookshelf Recipe For Compatability");	
+			//Quark Compatability recipe
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakbookshelf, 1), "B", 'B', new ItemStack(Blocks.BOOKSHELF, 1, 0));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.bigoakbookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 4));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchbookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 1));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 3));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 0));
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebookshelf, 1), "B", 'B', new ItemStack(custom_bookshelf, 1, 2));
+			RandomDecorativeThings.logger.info("Compatability Changes Finished");	
+		}
+		else
+		{
+			//bookshelves
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.oakbookshelf, 1), "WWW", "BBB", "WWW", 'W', new ItemStack(Blocks.PLANKS, 1, 0), 'B', Items.BOOK);
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.bigoakbookshelf, 1), "WWW", "BBB", "WWW", 'W', new ItemStack(Blocks.PLANKS, 1, 5), 'B', Items.BOOK);
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.birchbookshelf, 1), "WWW", "BBB", "WWW", 'W', new ItemStack(Blocks.PLANKS, 1, 2), 'B', Items.BOOK);
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.acaciabookshelf, 1), "WWW", "BBB", "WWW", 'W', new ItemStack(Blocks.PLANKS, 1, 4), 'B', Items.BOOK);
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.sprucebookshelf, 1), "WWW", "BBB", "WWW", 'W', new ItemStack(Blocks.PLANKS, 1, 1), 'B', Items.BOOK);
+			GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.junglebookshelf, 1), "WWW", "BBB", "WWW", 'W', new ItemStack(Blocks.PLANKS, 1, 3), 'B', Items.BOOK);
+		}
+		
 		//Toy castle
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.toycastle, 1), "RRR", "GGG", "GYG", 'R', new ItemStack(RDTItems.woolbit, 1, 1), 'G', new ItemStack(RDTItems.woolbit, 1, 7), 'Y', new ItemStack(RDTItems.woolbit, 1, 11));
 		//Lawnmower
