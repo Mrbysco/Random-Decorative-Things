@@ -24,14 +24,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockToyCastle extends BlockHorizontal{
+public class BlockRedPlumber extends BlockHorizontal{
 
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 3, 0, 0, 0.0625 * 14, 0.0625 * 16, 0.0625 * 16);
+	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 3, 0, 0.0625 * 3, 0.0625 * 13, 0.0625 * 16, 0.0625 * 13);
 	
-	public BlockToyCastle() {
+	public BlockRedPlumber() {
 		super(Material.CLAY);
-		setUnlocalizedName(RDTReference.RDTBlocks.TOYCASTLE.getUnlocalisedName());
-		setRegistryName(RDTReference.RDTBlocks.TOYCASTLE.getRegistryName());
+		setUnlocalizedName(RDTReference.RDTBlocks.TOYPLUMBERRED.getUnlocalisedName());
+		setRegistryName(RDTReference.RDTBlocks.TOYPLUMBERRED.getRegistryName());
 		this.setCreativeTab(RandomDecorativeThings.tabRDT);
 		this.setLightOpacity(0);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
@@ -98,4 +98,5 @@ public class BlockToyCastle extends BlockHorizontal{
     		List<AxisAlignedBB> collidingBoxes, Entity entityIn) {
     	super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn);
     }
+  
 }

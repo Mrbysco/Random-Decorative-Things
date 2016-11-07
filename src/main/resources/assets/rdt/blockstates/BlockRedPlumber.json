@@ -1,0 +1,8 @@
+{
+    "variants": {
+		"facing=east":  { "model": "rdt:BlockRedPlumber", "y": 90},
+		"facing=north": { "model": "rdt:BlockRedPlumber"},
+		"facing=west":  { "model": "rdt:BlockRedPlumber", "y": 270},
+        "facing=south": { "model": "rdt:BlockRedPlumber", "y": 180}
+    }
+}

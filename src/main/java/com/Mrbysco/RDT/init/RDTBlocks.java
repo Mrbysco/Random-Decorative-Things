@@ -1,6 +1,7 @@
 package com.Mrbysco.RDT.init;
 
 import com.Mrbysco.RDT.blocks.BlockLawnmower;
+import com.Mrbysco.RDT.blocks.BlockRedPlumber;
 import com.Mrbysco.RDT.blocks.BlockStrawberryCake;
 import com.Mrbysco.RDT.blocks.BlockToyCastle;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelAcacia;
@@ -56,6 +57,8 @@ public class RDTBlocks {
 	public static Block sprucebookshelf;
 	
 	public static Block strawberrycake;
+
+	public static Block redplumber;
 	
 	public static void init()
 	{
@@ -84,6 +87,8 @@ public class RDTBlocks {
 		sprucebookshelf = new BlockBookshelfSpruce();
 		
 		strawberrycake = new BlockStrawberryCake();
+
+		redplumber = new BlockRedPlumber();
 	}
 	
 	public static void register()
@@ -113,6 +118,8 @@ public class RDTBlocks {
 		registerBlock(sprucebookshelf);
 		
 		registerBlock(strawberrycake);
+		
+		registerBlock(redplumber);
 	}
 	
 	public static void registerBlock(Block block) 
@@ -154,6 +161,8 @@ public class RDTBlocks {
 		registerRender(sprucebookshelf);
 		
 		registerRender(strawberrycake);
+
+		registerRender(redplumber);
 	}
 	
 	public static void registerRender(Block block)

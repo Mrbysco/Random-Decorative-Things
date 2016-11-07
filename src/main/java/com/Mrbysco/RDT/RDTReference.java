@@ -67,7 +67,9 @@ public class RDTReference {
 		ACACIABOOKSHELF("acaciabookshelf", "BlockBookshelfAcacia"),
 		BIGOAKBOOKSHELF("bigoakbookshelf", "BlockBookshelfBigOak"),
 		
-		STRAWBERRYCAKE("strawberrycake", "BlockStrawberryCake");
+		STRAWBERRYCAKE("strawberrycake", "BlockStrawberryCake"),
+		
+		TOYPLUMBERRED("redplumber", "BlockRedPlumber");
 		
 		private String unlocalisedName;
 		private String registryName;
