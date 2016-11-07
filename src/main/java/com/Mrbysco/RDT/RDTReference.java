@@ -69,7 +69,8 @@ public class RDTReference {
 		
 		STRAWBERRYCAKE("strawberrycake", "BlockStrawberryCake"),
 		
-		TOYPLUMBERRED("redplumber", "BlockRedPlumber");
+		TOYPLUMBERRED("redplumber", "BlockRedPlumber"),
+		TOYPLUMBERGREEN("greenplumber", "BlockGreenPlumber");
 		
 		private String unlocalisedName;
 		private String registryName;

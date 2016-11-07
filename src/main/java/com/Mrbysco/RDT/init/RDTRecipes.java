@@ -174,5 +174,6 @@ public class RDTRecipes {
 		
 		//Red Plumber
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.redplumber, 1), "RR ", "WBW", "WWM", 'B', new ItemStack(RDTItems.claybit, 1, 12), 'W', new ItemStack(RDTItems.claybit, 1, 15), 'R', new ItemStack(RDTItems.claybit, 1, 1), 'M', new ItemStack(RDTItems.claybit, 1, 8));
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.redplumber, 1), "GG ", "WBW", "WWM", 'B', new ItemStack(RDTItems.claybit, 1, 12), 'W', new ItemStack(RDTItems.claybit, 1, 15), 'G', new ItemStack(RDTItems.claybit, 1, 2), 'M', new ItemStack(RDTItems.claybit, 1, 8));
 	}
 }
