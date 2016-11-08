@@ -42,7 +42,7 @@ public class BlockVillageHut2 extends BlockHorizontal{
 	@SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-        return BlockRenderLayer.CUTOUT_MIPPED;
+        return BlockRenderLayer.CUTOUT;
 }
 	
 	@Override
