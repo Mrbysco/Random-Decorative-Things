@@ -1,8 +1,5 @@
 package com.Mrbysco.RDT.blocks;
 
-import java.util.List;
-
-import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.RandomDecorativeThings;
 
 import net.minecraft.block.BlockHorizontal;
@@ -11,39 +8,34 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockVillageHut2 extends BlockHorizontal{
+public class BlockVillageBasic extends BlockHorizontal{
 
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 6, 0.0625 * 12);
+
 	
-	public BlockVillageHut2() {
-		super(Material.WOOD);
-		setUnlocalizedName(RDTReference.RDTBlocks.VILLAGEHUT2.getUnlocalisedName());
-		setRegistryName(RDTReference.RDTBlocks.VILLAGEHUT2.getRegistryName());
+	public BlockVillageBasic(Material materialIn) {
+		super(materialIn);
 		this.setCreativeTab(RandomDecorativeThings.tabRDT);
 		this.setLightOpacity(0);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setHardness(1.0F);
 		this.setSoundType(SoundType.WOOD);
-	}
-	
+		}
+
 	@SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
         return BlockRenderLayer.CUTOUT;
-}
+    }
 	
 	@Override
 	public boolean isFullCube(IBlockState state)
@@ -92,17 +84,4 @@ public class BlockVillageHut2 extends BlockHorizontal{
     {
         return new BlockStateContainer(this, new IProperty[] {FACING});
     }
-    
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
-    {
-        return BOUNDING_BOX;
-    }
-    
-    @Override
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox,
-    		List<AxisAlignedBB> collidingBoxes, Entity entityIn) {
-    	super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn);
-    }
-  
 }

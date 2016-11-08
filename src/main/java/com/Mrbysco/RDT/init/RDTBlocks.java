@@ -5,7 +5,6 @@ import com.Mrbysco.RDT.blocks.BlockLawnmower;
 import com.Mrbysco.RDT.blocks.BlockRedPlumber;
 import com.Mrbysco.RDT.blocks.BlockStrawberryCake;
 import com.Mrbysco.RDT.blocks.BlockToyCastle;
-import com.Mrbysco.RDT.blocks.BlockVillageHut2;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelAcacia;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelBigOak;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelBirch;
@@ -24,6 +23,8 @@ import com.Mrbysco.RDT.blocks.crates.BlockCrateBirch;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateJungle;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateOak;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateSpruce;
+import com.Mrbysco.RDT.blocks.villages.BlockVillageBlacksmith;
+import com.Mrbysco.RDT.blocks.villages.BlockVillageHut2;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -64,6 +65,7 @@ public class RDTBlocks {
 	public static Block greenplumber;
 
 	public static Block villagehut2;
+	public static Block villageblacksmith;
 	
 	public static void init()
 	{
@@ -97,6 +99,7 @@ public class RDTBlocks {
 		greenplumber = new BlockGreenPlumber();
 
 		villagehut2 = new BlockVillageHut2();
+		villageblacksmith = new BlockVillageBlacksmith();
 	}
 	
 	public static void register()
@@ -131,6 +134,7 @@ public class RDTBlocks {
 		registerBlock(greenplumber);
 
 		registerBlock(villagehut2);
+		registerBlock(villageblacksmith);
 	}
 	
 	public static void registerBlock(Block block) 
@@ -177,6 +181,7 @@ public class RDTBlocks {
 		registerRender(greenplumber);
 
 		registerRender(villagehut2);
+		registerRender(villageblacksmith);
 	}
 	
 	public static void registerRender(Block block)

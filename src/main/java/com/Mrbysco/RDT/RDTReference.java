@@ -72,7 +72,8 @@ public class RDTReference {
 		TOYPLUMBERRED("redplumber", "BlockRedPlumber"),
 		TOYPLUMBERGREEN("greenplumber", "BlockGreenPlumber"),
 		
-		VILLAGEHUT2("villagehut2", "BlockVillageHut2");
+		VILLAGEHUT2("villagehut2", "BlockVillageHut2"),
+		VILLAGEBLACKSMITH("villageblacksmith", "BlockVillageBlacksmith");
 		
 		private String unlocalisedName;
 		private String registryName;
