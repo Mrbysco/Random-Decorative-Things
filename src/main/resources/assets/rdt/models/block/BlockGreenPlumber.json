@@ -1,6 +1,7 @@
 {
 	"__comment": "Designed by Mrbysco with Cubik Studio - https://cubik.studio",
 	"textures": {
+	    "particle": "blocks/hardened_clay_stained_lime",
 		"Shoes": "blocks/hardened_clay_stained_brown",
 		"Overal1": "blocks/hardened_clay_stained_light_blue",
 		"Overal2": "blocks/hardened_clay_stained_lime",

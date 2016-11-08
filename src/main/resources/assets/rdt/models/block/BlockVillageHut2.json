@@ -1,6 +1,7 @@
 {
 	"__comment": "Designed by Mrbysco with Cubik Studio - https://cubik.studio",
 	"textures": {
+		"particle": "blocks/planks_oak",
 		"Cobblestone": "blocks/cobblestone",
 		"Wood_Planks": "blocks/planks_oak",
 		"Ladder": "blocks/ladder",
