@@ -5,6 +5,7 @@ import com.Mrbysco.RDT.blocks.BlockLawnmower;
 import com.Mrbysco.RDT.blocks.BlockRedPlumber;
 import com.Mrbysco.RDT.blocks.BlockStrawberryCake;
 import com.Mrbysco.RDT.blocks.BlockToyCastle;
+import com.Mrbysco.RDT.blocks.BlockVillageHut2;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelAcacia;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelBigOak;
 import com.Mrbysco.RDT.blocks.barrels.BlockBarrelBirch;
@@ -61,6 +62,8 @@ public class RDTBlocks {
 
 	public static Block redplumber;
 	public static Block greenplumber;
+
+	public static Block villagehut2;
 	
 	public static void init()
 	{
@@ -92,6 +95,8 @@ public class RDTBlocks {
 
 		redplumber = new BlockRedPlumber();
 		greenplumber = new BlockGreenPlumber();
+
+		villagehut2 = new BlockVillageHut2();
 	}
 	
 	public static void register()
@@ -124,6 +129,8 @@ public class RDTBlocks {
 		
 		registerBlock(redplumber);
 		registerBlock(greenplumber);
+
+		registerBlock(villagehut2);
 	}
 	
 	public static void registerBlock(Block block) 
@@ -168,6 +175,8 @@ public class RDTBlocks {
 
 		registerRender(redplumber);
 		registerRender(greenplumber);
+
+		registerRender(villagehut2);
 	}
 	
 	public static void registerRender(Block block)

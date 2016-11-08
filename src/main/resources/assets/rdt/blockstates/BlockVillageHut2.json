@@ -1,0 +1,8 @@
+{
+    "variants": {
+		"facing=east":  { "model": "rdt:BlockVillageHut2", "y": 90},
+		"facing=north": { "model": "rdt:BlockVillageHut2"},
+		"facing=west":  { "model": "rdt:BlockVillageHut2", "y": 270},
+        "facing=south": { "model": "rdt:BlockVillageHut2", "y": 180}
+    }
+}
