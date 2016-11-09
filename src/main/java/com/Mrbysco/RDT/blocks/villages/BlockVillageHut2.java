@@ -2,6 +2,8 @@ package com.Mrbysco.RDT.blocks.villages;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.RandomDecorativeThings;
 import com.Mrbysco.RDT.blocks.BlockVillageBasic;
@@ -41,6 +43,5 @@ public class BlockVillageHut2 extends BlockVillageBasic{
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox,
     		List<AxisAlignedBB> collidingBoxes, Entity entityIn) {
     	super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn);
-    }
-  
+    } 
 }
