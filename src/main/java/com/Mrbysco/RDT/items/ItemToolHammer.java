@@ -1,6 +1,5 @@
 package com.Mrbysco.RDT.items;
 
-import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.RandomDecorativeThings;
 
 import net.minecraft.item.Item;

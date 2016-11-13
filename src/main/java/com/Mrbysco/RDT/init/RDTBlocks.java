@@ -24,6 +24,7 @@ import com.Mrbysco.RDT.blocks.crates.BlockCrateJungle;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateOak;
 import com.Mrbysco.RDT.blocks.crates.BlockCrateSpruce;
 import com.Mrbysco.RDT.blocks.villages.BlockVillageBlacksmith;
+import com.Mrbysco.RDT.blocks.villages.BlockVillageButcher;
 import com.Mrbysco.RDT.blocks.villages.BlockVillageHut2;
 
 import net.minecraft.block.Block;
@@ -66,6 +67,7 @@ public class RDTBlocks {
 
 	public static Block villagehut2;
 	public static Block villageblacksmith;
+	public static Block villagebutcher;
 	
 	public static void init()
 	{
@@ -100,6 +102,7 @@ public class RDTBlocks {
 
 		villagehut2 = new BlockVillageHut2();
 		villageblacksmith = new BlockVillageBlacksmith();
+		villagebutcher = new BlockVillageButcher();
 	}
 	
 	public static void register()
@@ -135,6 +138,7 @@ public class RDTBlocks {
 
 		registerBlock(villagehut2);
 		registerBlock(villageblacksmith);
+		registerBlock(villagebutcher);
 	}
 	
 	public static void registerBlock(Block block) 
@@ -182,6 +186,7 @@ public class RDTBlocks {
 
 		registerRender(villagehut2);
 		registerRender(villageblacksmith);
+		registerRender(villagebutcher);
 	}
 	
 	public static void registerRender(Block block)

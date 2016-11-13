@@ -2,7 +2,6 @@ package com.Mrbysco.RDT.init;
 
 import com.Mrbysco.RDT.RandomDecorativeThings;
 
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
