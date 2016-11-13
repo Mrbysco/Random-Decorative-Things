@@ -42,5 +42,4 @@ public class BlockVillageButcher extends BlockVillageBasic{
     		List<AxisAlignedBB> collidingBoxes, Entity entityIn) {
     	super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn);
     }
-  
 }
