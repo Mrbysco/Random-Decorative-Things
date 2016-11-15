@@ -174,5 +174,9 @@ public class RDTRecipes {
 		//Red Plumber
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.redplumber, 1), "RR ", "WBW", "WWM", 'B', new ItemStack(RDTItems.claybit, 1, 12), 'W', new ItemStack(RDTItems.claybit, 1, 15), 'R', new ItemStack(RDTItems.claybit, 1, 1), 'M', new ItemStack(RDTItems.claybit, 1, 8));
 		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.greenplumber, 1), "GG ", "WBW", "WWM", 'B', new ItemStack(RDTItems.claybit, 1, 12), 'W', new ItemStack(RDTItems.claybit, 1, 15), 'G', new ItemStack(RDTItems.claybit, 1, 2), 'M', new ItemStack(RDTItems.claybit, 1, 8));
+
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.villagehut2, 1), "PPP", "SPS", "SSS", 'P', new ItemStack(RDTItems.oakbit, 1), 'S', new ItemStack(RDTItems.stonebit, 1));
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.villageblacksmith, 1), "SSS", "SSP", "SSS", 'S', new ItemStack(RDTItems.stonebit, 1), 'P', new ItemStack(RDTItems.oakbit, 1));
+		GameRegistry.addShapedRecipe(new ItemStack(RDTBlocks.villagebutcher, 1), "PPP", "PPP", "SSS", 'S', new ItemStack(RDTItems.stonebit, 1), 'P', new ItemStack(RDTItems.oakbit, 1));
 	}
 }
