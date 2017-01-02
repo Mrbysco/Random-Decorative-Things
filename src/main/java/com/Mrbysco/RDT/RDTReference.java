@@ -10,19 +10,19 @@ public class RDTReference {
 	public static final String SERVER_PROXY_CLASS = "com.Mrbysco.RDT.proxy.ServerProxy";
 	
 	public static enum RDTItems {
-		WOOLBIT("woolbit", "ItemWoolbit"),
-		CLAYBIT("claybit", "ItemClaybit"),
-		STONEBIT("stonebit", "ItemStonebit"),
-		STONEHAMMER("stonehammer", "ItemStoneHammer"),
-		IRONHAMMER("ironhammer", "ItemIronHammer"),
-		FLINTSAW("flintsaw", "ItemFlintSaw"),
-		IRONSAW("ironsaw", "ItemIronSaw"),
-		OAKBIT("oakbit", "ItemOakBit"),
-		BIGOAKBIT("bigoakbit", "ItemBigOakBit"),
-		BIRCHBIT("birchbit", "ItemBirchBit"),
-		JUNGLEBIT("junglebit", "ItemJungleBit"),
-		ACACIABIT("acaciabit", "ItemAcaciaBit"),
-		SPRUCEBIT("sprucebit", "ItemSpruceBit");
+		WOOLBIT("woolbit", "itemwoolbit"),
+		CLAYBIT("claybit", "itemclaybit"),
+		STONEBIT("stonebit", "itemstonebit"),
+		STONEHAMMER("stonehammer", "itemstonehammer"),
+		IRONHAMMER("ironhammer", "itemironhammer"),
+		FLINTSAW("flintsaw", "itemflintsaw"),
+		IRONSAW("ironsaw", "itemironsaw"),
+		OAKBIT("oakbit", "itemoakbit"),
+		BIGOAKBIT("bigoakbit", "itembigoakbit"),
+		BIRCHBIT("birchbit", "itembirchbit"),
+		JUNGLEBIT("junglebit", "itemjunglebit"),
+		ACACIABIT("acaciabit", "itemacaciabit"),
+		SPRUCEBIT("sprucebit", "itemsprucebit");
 		
 		
 		private String unlocalisedName;
