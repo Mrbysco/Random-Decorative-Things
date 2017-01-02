@@ -1,0 +1,82 @@
+itemGroup.tabRDT=Random Decorative Things
+
+item.woolbit.black.name=Black Wool Bit
+item.woolbit.red.name=Red Wool Bit
+item.woolbit.green.name=Green Wool Bit
+item.woolbit.brown.name=Brown Wool Bit
+item.woolbit.blue.name=Blue Wool Bit
+item.woolbit.purple.name=Purple Wool Bit
+item.woolbit.cyan.name=Cyan Wool Bit
+item.woolbit.silver.name=Light Gray Wool Bit
+item.woolbit.gray.name=Gray Wool Bit
+item.woolbit.pink.name=Pink Wool Bit
+item.woolbit.lime.name=Lime Wool Bit
+item.woolbit.yellow.name=Yellow Wool Bit
+item.woolbit.lightBlue.name=Light Blue Wool Bit
+item.woolbit.magenta.name=Magenta Wool Bit
+item.woolbit.orange.name=Orange Wool Bit
+item.woolbit.white.name=White Wool Bit
+
+item.claybit.black.name=Black Clay Bit
+item.claybit.red.name=Red Clay Bit
+item.claybit.green.name=Green Clay Bit
+item.claybit.brown.name=Brown Clay Bit
+item.claybit.blue.name=Blue Clay Bit
+item.claybit.purple.name=Purple Clay Bit
+item.claybit.cyan.name=Cyan Clay Bit
+item.claybit.silver.name=Light Gray Clay Bit
+item.claybit.gray.name=Gray Clay Bit
+item.claybit.pink.name=Pink Clay Bit
+item.claybit.lime.name=Lime Clay Bit
+item.claybit.yellow.name=Yellow Clay Bit
+item.claybit.lightBlue.name=Light Blue Clay Bit
+item.claybit.magenta.name=Magenta Clay Bit
+item.claybit.orange.name=Orange Clay Bit
+item.claybit.white.name=White Clay Bit
+
+item.stonebit.name=Stone Bit
+
+item.oakbit.name=Oak Bit
+item.bigoakbit.name=Big Oak Bit
+item.birchbit.name=Birch Bit
+item.sprucebit.name=Spruce Bit
+item.acaciabit.name=Acacia Bit
+item.junglebit.name=Jungle Bit
+
+item.stonehammer.name=Stone Hammer
+item.ironhammer.name=Iron Hammer
+item.flintsaw.name=Flint Saw
+item.ironsaw.name=Iron Saw
+
+tile.lawnmower.name=Lawnmower
+tile.toycastle.name=Toy Castle
+
+tile.oakcrate.name=Oak Crate
+tile.birchcrate.name=Birch Crate
+tile.sprucecrate.name=Spruce Crate
+tile.junglecrate.name=Jungle Crate
+tile.acaciacrate.name=Acacia Crate
+tile.bigoakcrate.name=Big Oak Crate
+
+tile.oakbarrel.name=Oak Barrel
+tile.birchbarrel.name=Birch Barrel
+tile.sprucebarrel.name=Spruce Barrel
+tile.junglebarrel.name=Jungle Barrel
+tile.acaciabarrel.name=Acacia Barrel
+tile.bigoakbarrel.name=Big Oak Barrel
+
+tile.oakbookshelf.name=Oak Bookshelf
+tile.birchbookshelf.name=Birch Bookshelf
+tile.sprucebookshelf.name=Spruce Bookshelf
+tile.junglebookshelf.name=Jungle Bookshelf
+tile.acaciabookshelf.name=Acacia Bookshelf
+tile.bigoakbookshelf.name=Big Oak Bookshelf
+
+tile.strawberrycake.name=Strawberry Cake
+
+tile.redplumber.name=Red Plumber Toy
+tile.greenplumber.name=Green Plumber Toy
+
+tile.villagehut2.name=Village Hut 2
+tile.villageblacksmith.name=Village Blacksmith
+tile.villagebutcher.name=Village Butcher
