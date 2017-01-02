@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockToyCastle",
+	"parent": "rdt:block/blocktoycastle",
 	"display": {
 		"thirdperson_righthand": {
 			"translation":  [ 0, 0, -1.043 ],

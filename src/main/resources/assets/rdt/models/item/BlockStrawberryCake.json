@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockStrawberryCake",
+	"parent": "rdt:block/blockstrawberrycake",
 	"display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

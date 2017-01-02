@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockBookshelfSpruce",
+	"parent": "rdt:block/blockbookshelfspruce",
 	"display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

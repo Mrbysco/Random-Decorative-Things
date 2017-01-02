@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockVillageBlacksmith",
+	"parent": "rdt:block/blockvillageblacksmith",
 	"display": {
 		"thirdperson_righthand": {
 			"translation":  [ 0, 0.4173, -1.043 ],

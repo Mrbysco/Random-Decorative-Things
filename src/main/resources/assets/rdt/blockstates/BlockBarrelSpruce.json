@@ -1,5 +1,5 @@
 {
     "variants": {
-		"normal": { "model": "rdt:BlockBarrelSpruce" }
+		"normal": { "model": "rdt:blockbarrelspruce" }
     }
 }

@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockBarrelSpruce",
+	"parent": "rdt:block/blockbarrelspruce",
 	"display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

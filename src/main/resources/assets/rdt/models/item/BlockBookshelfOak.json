@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockBookshelfOak",
+	"parent": "rdt:block/blockbookshelfoak",
 	"display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

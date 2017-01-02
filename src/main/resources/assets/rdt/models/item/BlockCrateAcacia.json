@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockCrateAcacia",
+	"parent": "rdt:block/blockcrateacacia",
 	"display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

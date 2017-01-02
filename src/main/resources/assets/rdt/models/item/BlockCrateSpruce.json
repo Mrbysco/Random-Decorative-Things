@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockCrateSpruce",
+	"parent": "rdt:block/blockcratespruce",
 	"display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

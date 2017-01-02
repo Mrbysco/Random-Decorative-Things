@@ -1,5 +1,5 @@
 {
-	"parent": "rdt:block/BlockRedPlumber",
+	"parent": "rdt:block/blockredplumber",
 	"display": {
 		"thirdperson_righthand": {
 			"translation":  [ 0, 0, -1.043 ],
