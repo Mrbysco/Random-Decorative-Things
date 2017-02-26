@@ -1,7 +1,5 @@
 package com.Mrbysco.RDT.items;
 
-import java.util.List;
-
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.RandomDecorativeThings;
 
