@@ -4,7 +4,7 @@ public class RDTReference {
 	public static final String MOD_ID = "rdt";
 	public static final String MOD_NAME = "Random Decorative Things";
 	public static final String VERSION = "0.0.4.2";
-	public static final String ACCEPTED_VERSIONS = "[1.11.2]";
+	public static final String ACCEPTED_VERSIONS = "[1.12]";
 			
 	public static final String CLIENT_PROXY_CLASS = "com.Mrbysco.RDT.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.Mrbysco.RDT.proxy.ServerProxy";

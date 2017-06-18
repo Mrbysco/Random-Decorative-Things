@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "rdt:blockcrateacacia"
+  },
+  "pattern": [
+    "BSB",
+    "S S",
+    "BSB"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "rdt:itemacaciabit",
+      "data": 0
+    },
+    "S": {
+      "item": "minecraft:wooden_slab",
+      "data": 4
+    }
+  }
+}

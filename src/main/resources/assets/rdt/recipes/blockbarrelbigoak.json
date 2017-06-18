@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "rdt:blockbarrelbigoak"
+  },
+  "pattern": [
+    "BSB",
+    "B B",
+    "BSB"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "rdt:itembigoakbit",
+      "data": 0
+    },
+    "S": {
+      "item": "minecraft:wooden_slab",
+      "data": 5
+    }
+  }
+}

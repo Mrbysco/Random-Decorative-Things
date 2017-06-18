@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "rdt:itemstonehammer"
+  },
+  "pattern": [
+    " G ",
+    "GS ",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "G": {
+      "item": "minecraft:cobblestone"
+    }
+  }
+}

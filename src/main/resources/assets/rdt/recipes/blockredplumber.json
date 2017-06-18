@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "rdt:blockredplumber"
+  },
+  "pattern": [
+    "RR ",
+    "WBW",
+    "WWM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "rdt:itemclaybit",
+      "data": 12
+    },
+    "R": {
+      "item": "rdt:itemclaybit",
+      "data": 1
+    },
+    "W": {
+      "item": "rdt:itemclaybit",
+      "data": 15
+    },
+    "M": {
+      "item": "rdt:itemclaybit",
+      "data": 8
+    }
+  }
+}

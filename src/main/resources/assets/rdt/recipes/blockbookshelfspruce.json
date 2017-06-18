@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "rdt:blockbookshelfspruce"
+  },
+  "pattern": [
+    "WWW",
+    "BBB",
+    "WWW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "W": {
+      "item": "minecraft:planks",
+      "data": 1
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "rdt:blockgreenplumber"
+  },
+  "pattern": [
+    "GG ",
+    "WBW",
+    "WWM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "rdt:itemclaybit",
+      "data": 12
+    },
+    "W": {
+      "item": "rdt:itemclaybit",
+      "data": 15
+    },
+    "G": {
+      "item": "rdt:itemclaybit",
+      "data": 2
+    },
+    "M": {
+      "item": "rdt:itemclaybit",
+      "data": 8
+    }
+  }
+}

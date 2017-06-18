@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "rdt:itemflintsaw"
+  },
+  "pattern": [
+    " S ",
+    "SG ",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "G": {
+      "item": "minecraft:flint"
+    }
+  }
+}

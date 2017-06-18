@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "rdt:blockstrawberrycake"
+  },
+  "pattern": [
+    " R ",
+    "WWW",
+    "OOO"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "rdt:itemclaybit",
+      "data": 1
+    },
+    "W": {
+      "item": "rdt:itemclaybit",
+      "data": 15
+    },
+    "O": {
+      "item": "rdt:itemclaybit",
+      "data": 14
+    }
+  }
+}

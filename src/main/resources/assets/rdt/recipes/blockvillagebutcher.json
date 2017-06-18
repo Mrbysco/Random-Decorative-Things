@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "rdt:blockvillagebutcher"
+  },
+  "pattern": [
+    "PPP",
+    "PPP",
+    "SSS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "rdt:itemoakbit",
+      "data": 0
+    },
+    "S": {
+      "item": "rdt:itemstonebit"
+    }
+  }
+}

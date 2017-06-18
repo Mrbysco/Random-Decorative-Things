@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "minecraft:wool",
+    "data": 9
+  },
+  "pattern": [
+    "WWW",
+    "W W",
+    "WWW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "rdt:itemwoolbit",
+      "data": 6,
+      "count": 8
+    }
+  }
+}

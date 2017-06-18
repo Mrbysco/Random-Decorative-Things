@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "rdt:blocklawnmower"
+  },
+  "pattern": [
+    "  B",
+    "RGR",
+    "WRW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "rdt:itemwoolbit",
+      "data": 0
+    },
+    "R": {
+      "item": "rdt:itemclaybit",
+      "data": 1
+    },
+    "G": {
+      "item": "rdt:itemclaybit",
+      "data": 8
+    },
+    "W": {
+      "item": "rdt:itemwoolbit",
+      "data": 15
+    }
+  }
+}
