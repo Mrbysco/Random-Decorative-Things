@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "rdt:itemoakbit",
+    "data": 0,
+    "count": 8
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:planks",
+      "data": 0
+    },
+    {
+      "item": "#BITSAW"
+    }
+  ]
+}

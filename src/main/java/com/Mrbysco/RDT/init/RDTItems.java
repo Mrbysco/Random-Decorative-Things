@@ -2,10 +2,7 @@ package com.Mrbysco.RDT.init;
 
 import com.Mrbysco.RDT.RDTReference;
 import com.Mrbysco.RDT.items.ItemClaybit;
-import com.Mrbysco.RDT.items.ItemFlintSaw;
-import com.Mrbysco.RDT.items.ItemIronHammer;
-import com.Mrbysco.RDT.items.ItemIronSaw;
-import com.Mrbysco.RDT.items.ItemStoneHammer;
+import com.Mrbysco.RDT.items.ItemCustomTool;
 import com.Mrbysco.RDT.items.ItemStonebit;
 import com.Mrbysco.RDT.items.ItemWoolbit;
 import com.Mrbysco.RDT.items.woodbits.ItemAcaciaBit;
@@ -18,8 +15,10 @@ import com.Mrbysco.RDT.items.woodbits.ItemSpruceBit;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class RDTItems {
 	
@@ -50,27 +49,32 @@ public class RDTItems {
 		sprucebit = new ItemSpruceBit();
 		acaciabit = new ItemAcaciaBit();
 		junglebit = new ItemJungleBit();
-		stonehammer = new ItemStoneHammer(ToolMaterial.STONE);
-		ironhammer = new ItemIronHammer(ToolMaterial.IRON);
-		flintsaw = new ItemFlintSaw(ToolMaterial.STONE);
-		ironsaw = new ItemIronSaw(ToolMaterial.IRON);
+		stonehammer = new ItemCustomTool(ToolMaterial.STONE, "stonehammer", "itemstonehammer");
+		ironhammer = new ItemCustomTool(ToolMaterial.IRON, "ironhammer", "itemironhammer");
+		flintsaw = new ItemCustomTool(ToolMaterial.STONE, "flintsaw", "itemflintsaw");
+		ironsaw = new ItemCustomTool(ToolMaterial.IRON, "ironsaw", "itemironsaw");
 	}
 	
 	public static void register()
 	{
-		GameRegistry.register(woolbit);
-		GameRegistry.register(claybit);
-		GameRegistry.register(stonebit);
-		GameRegistry.register(oakbit);
-		GameRegistry.register(bigoakbit);
-		GameRegistry.register(birchbit);
-		GameRegistry.register(sprucebit);
-		GameRegistry.register(acaciabit);
-		GameRegistry.register(junglebit);
-		GameRegistry.register(stonehammer);
-		GameRegistry.register(ironhammer);
-		GameRegistry.register(flintsaw);
-		GameRegistry.register(ironsaw);
+		ForgeRegistries.ITEMS.register(woolbit);
+		ForgeRegistries.ITEMS.register(claybit);
+		ForgeRegistries.ITEMS.register(stonebit);
+		ForgeRegistries.ITEMS.register(oakbit);
+		ForgeRegistries.ITEMS.register(bigoakbit);
+		ForgeRegistries.ITEMS.register(birchbit);
+		ForgeRegistries.ITEMS.register(sprucebit);
+		ForgeRegistries.ITEMS.register(acaciabit);
+		ForgeRegistries.ITEMS.register(junglebit);
+		ForgeRegistries.ITEMS.register(stonehammer);
+		ForgeRegistries.ITEMS.register(ironhammer);
+		ForgeRegistries.ITEMS.register(flintsaw);
+		ForgeRegistries.ITEMS.register(ironsaw);
+		
+		OreDictionary.registerOre("bithammer", new ItemStack(RDTItems.stonehammer));
+		OreDictionary.registerOre("bithammer", new ItemStack(RDTItems.ironhammer));
+		OreDictionary.registerOre("bitsaw", new ItemStack(RDTItems.flintsaw));
+		OreDictionary.registerOre("bitsaw", new ItemStack(RDTItems.ironsaw));
 	}
 	
 	public static void registerRenders()

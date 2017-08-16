@@ -8,7 +8,6 @@ import com.Mrbysco.RDT.init.RDTItems;
 import com.Mrbysco.RDT.init.RDTRecipes;
 import com.Mrbysco.RDT.proxy.CommonProxy;
 
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -28,17 +27,12 @@ public class RandomDecorativeThings
 	public static CommonProxy proxy;
 	
 	public static final Logger logger = LogManager.getLogger(RDTReference.MOD_ID);
-	public static boolean isQuarkInstalled = false;
 	
 	public static final RDTTab tabRDT = new RDTTab("tabRDT");
 	
     @EventHandler
     public void PreInit(FMLPreInitializationEvent event)
     {		
-    	isQuarkInstalled = Loader.isModLoaded("quark");
-		if(isQuarkInstalled)logger.info("Loading With QuarkCompat");
-		else{logger.info("Loading Without QuarkCompat");}
-		
     	RDTBlocks.init();
     	RDTBlocks.register();
     	RDTItems.init();

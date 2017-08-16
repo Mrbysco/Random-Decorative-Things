@@ -23,6 +23,18 @@ public class BaseRotatable extends BlockHorizontal{
 	}
 	
 	@Override
+	public boolean isFullCube(IBlockState state)
+    {
+        return false;
+    }
+
+	@Override
+    public boolean isOpaqueCube(IBlockState state)
+    {
+        return false;
+    }
+	
+	@Override
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));

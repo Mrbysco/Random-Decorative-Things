@@ -29,23 +29,11 @@ public class BlockToyCastle extends BaseRotatable{
 		this.setHardness(1.0F);
 		this.setSoundType(SoundType.STONE);
 	}
-	
-	@Override
-	public boolean isFullCube(IBlockState state)
-    {
-        return false;
-    }
-
-	@Override
-    public boolean isOpaqueCube(IBlockState state)
-    {
-        return false;
-    }
     
 	@Override
 	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox,
 			List<AxisAlignedBB> collidingBoxes, Entity entityIn, boolean p_185477_7_) {
 		// TODO Auto-generated method stub
-		super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn, p_185477_7_);
+        addCollisionBoxToList(pos, entityBox, collidingBoxes, BOUNDING_BOX);
 	}
 }

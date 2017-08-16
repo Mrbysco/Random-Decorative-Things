@@ -1,0 +1,16 @@
+[
+	{
+		"ingredient": {
+		  "type": "forge:ore_dict",
+		  "ore": "bitsaw"
+		},
+		"name": "BITSAW"
+	  },
+	  {
+		"ingredient": {
+		  "type": "forge:ore_dict",
+		  "ore": "bithammer"
+		},
+		"name": "BITHAMMER"
+	}
+]

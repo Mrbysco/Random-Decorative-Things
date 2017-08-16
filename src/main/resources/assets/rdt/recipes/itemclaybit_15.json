@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "rdt:itemclaybit",
+    "data": 15,
+    "count": 8
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stained_hardened_clay",
+      "data": 0
+    },    
+	{
+      "item": "#BITHAMMER"
+    }
+  ]
+}
