@@ -1,8 +1,0 @@
-{
-    "variants": {
-		"facing=east":  { "model": "rdt:blockvillagebutcher", "y": 90},
-		"facing=north": { "model": "rdt:blockvillagebutcher"},
-		"facing=west":  { "model": "rdt:blockvillagebutcher", "y": 270},
-        "facing=south": { "model": "rdt:blockvillagebutcher", "y": 180}
-    }
-}

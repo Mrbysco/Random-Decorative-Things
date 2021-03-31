@@ -1,8 +1,0 @@
-{
-    "variants": {
-		"facing=east":  { "model": "rdt:blockvillageblacksmith", "y": 90},
-		"facing=north": { "model": "rdt:blockvillageblacksmith"},
-		"facing=west":  { "model": "rdt:blockvillageblacksmith", "y": 270},
-        "facing=south": { "model": "rdt:blockvillageblacksmith", "y": 180}
-    }
-}

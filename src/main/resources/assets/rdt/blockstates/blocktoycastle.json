@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=south": { "model": "rdt:blocktoycastle" },
-        "facing=north": { "model": "rdt:blocktoycastle", "y": 180 },
-        "facing=east":  { "model": "rdt:blocktoycastle", "y": 270 },
-        "facing=west":  { "model": "rdt:blocktoycastle", "y": 90 }
-    }
-}
