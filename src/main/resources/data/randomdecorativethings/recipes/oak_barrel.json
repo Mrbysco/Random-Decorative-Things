@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "randomdecorativethings:oak_barrel"
+  },
+  "pattern": [
+    "BSB",
+    "B B",
+    "BSB"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:oak_planks"
+    },
+    "S": {
+      "item": "minecraft:oak_slab"
+    }
+  }
+}

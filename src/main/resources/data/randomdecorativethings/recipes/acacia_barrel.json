@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "randomdecorativethings:acacia_barrel"
+  },
+  "pattern": [
+    "BSB",
+    "B B",
+    "BSB"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:acacia_planks"
+    },
+    "S": {
+      "item": "minecraft:acacia_slab"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "randomdecorativethings:block/toy_castle" },
+        "facing=north": { "model": "randomdecorativethings:block/toy_castle", "y": 180 },
+        "facing=east":  { "model": "randomdecorativethings:block/toy_castle", "y": 270 },
+        "facing=west":  { "model": "randomdecorativethings:block/toy_castle", "y": 90 }
+    }
+}

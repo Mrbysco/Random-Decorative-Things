@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "randomdecorativethings:oak_bookshelf"
+  },
+  "pattern": [
+    "B"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:bookshelf"
+    }
+  }
+}

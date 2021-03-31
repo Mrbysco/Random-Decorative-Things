@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "randomdecorativethings:red_plumber"
+  },
+  "pattern": [
+    "RR ",
+    "WBW",
+    "WWM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:light_blue_terracotta"
+    },
+    "R": {
+      "item": "minecraft:red_terracotta"
+    },
+    "W": {
+      "item": "minecraft:white_terracotta"
+    },
+    "M": {
+      "item": "minecraft:gray_terracotta"
+    }
+  }
+}

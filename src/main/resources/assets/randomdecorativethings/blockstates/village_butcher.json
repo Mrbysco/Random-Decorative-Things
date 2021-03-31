@@ -1,0 +1,8 @@
+{
+    "variants": {
+		"facing=east":  { "model": "randomdecorativethings:block/village_butcher", "y": 90},
+		"facing=north": { "model": "randomdecorativethings:block/village_butcher"},
+		"facing=west":  { "model": "randomdecorativethings:block/village_butcher", "y": 270},
+        "facing=south": { "model": "randomdecorativethings:block/village_butcher", "y": 180}
+    }
+}

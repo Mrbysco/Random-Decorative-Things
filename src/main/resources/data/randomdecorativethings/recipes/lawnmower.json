@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "randomdecorativethings:lawnmower"
+  },
+  "pattern": [
+    "  B",
+    "RGR",
+    "WRW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "R": {
+      "item": "minecraft:red_terracotta"
+    },
+    "G": {
+      "item": "minecraft:gray_terracotta"
+    },
+    "W": {
+      "item": "minecraft:white_terracotta"
+    }
+  }
+}

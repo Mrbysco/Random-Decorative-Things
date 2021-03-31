@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "randomdecorativethings:birch_barrel"
+  },
+  "pattern": [
+    "BSB",
+    "B B",
+    "BSB"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:birch_planks"
+    },
+    "S": {
+      "item": "minecraft:birch_slab"
+    }
+  }
+}

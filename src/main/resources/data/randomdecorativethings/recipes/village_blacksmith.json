@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "randomdecorativethings:village_blacksmith"
+  },
+  "pattern": [
+    "SSS",
+    "SSP",
+    "SSS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  }
+}

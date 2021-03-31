@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "randomdecorativethings:strawberry_cake"
+  },
+  "pattern": [
+    " R ",
+    "WWW",
+    "OOO"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "minecraft:red_terracotta"
+    },
+    "W": {
+      "item": "minecraft:white_terracotta"
+    },
+    "O": {
+      "item": "minecraft:orange_terracotta"
+    }
+  }
+}

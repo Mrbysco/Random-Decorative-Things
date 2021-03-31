@@ -1,0 +1,8 @@
+{
+    "variants": {
+		"facing=east":  { "model": "randomdecorativethings:block/green_plumber", "y": 90},
+		"facing=north": { "model": "randomdecorativethings:block/green_plumber"},
+		"facing=west":  { "model": "randomdecorativethings:block/green_plumber", "y": 270},
+        "facing=south": { "model": "randomdecorativethings:block/green_plumber", "y": 180}
+    }
+}

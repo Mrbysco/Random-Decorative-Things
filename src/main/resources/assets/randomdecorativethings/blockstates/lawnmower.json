@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "randomdecorativethings:block/lawnmower" },
+        "facing=north": { "model": "randomdecorativethings:block/lawnmower", "y": 180 },
+        "facing=east":  { "model": "randomdecorativethings:block/lawnmower", "y": 270 },
+        "facing=west":  { "model": "randomdecorativethings:block/lawnmower", "y": 90 }
+    }
+}

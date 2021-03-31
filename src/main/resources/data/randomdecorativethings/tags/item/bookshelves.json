@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "randomdecorativethings:oak_bookshelf",
+    "randomdecorativethings:spruce_bookshelf",
+    "randomdecorativethings:birch_bookshelf",
+    "randomdecorativethings:jungle_bookshelf",
+    "randomdecorativethings:acacia_bookshelf",
+    "randomdecorativethings:dark_oak_bookshelf"
+  ]
+}
