@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-issueTrackerURL="https://github.com/mrbysco/forcecraft"
+issueTrackerURL="https://github.com/Mrbysco/Random-Decorative-Things/issues"
 license="MIT"
 
 [[mods]]
 modId="randomdecorativethings"
 version="${file.jarVersion}"
 displayName="Random Decorative Things"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/forcecraft"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/random-decorative-things"
 authors="Mrbysco"
 description='''
 Some random decorative blocks (maybe items)

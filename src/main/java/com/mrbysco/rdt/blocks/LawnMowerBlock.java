@@ -4,7 +4,6 @@ import com.mrbysco.rdt.blocks.base.BaseRotatable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -88,8 +87,6 @@ public class LawnMowerBlock extends BaseRotatable {
 			Block.makeCuboidShape(5.672413793103448, 2.8125, 6.327586206896552, 9.672413793103448, 3.625, 9.327586206896552)
 	).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR)).get();
 
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 1, 0, 0.0625 * 2, 0.0625 * 15, 0.0625 * 6, 0.0625 * 14);
-	
 	public LawnMowerBlock(Block.Properties builder) {
 		super(builder);
 	}

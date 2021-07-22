@@ -24,9 +24,7 @@ public class ClientHandler {
 	public static void registerBlockColors(final ColorHandlerEvent.Block event) {
 		BlockColors colors = event.getBlockColors();
 
-		colors.register((state, reader, pos, color) -> {
-					return reader != null && pos != null ? BiomeColors.getGrassColor(reader, pos) : GrassColors.get(0.5D, 1.0D);
-				}, RandomRegistry.VILLAGE_BUTCHER.get());
+		colors.register((state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getGrassColor(reader, pos) : GrassColors.get(0.5D, 1.0D), RandomRegistry.VILLAGE_BUTCHER.get());
 	}
 
 	public static void registerItemColors(final ColorHandlerEvent.Item event) {
