@@ -1,30 +1,29 @@
 package com.mrbysco.rdt.blocks;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.IBooleanFunction;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.stream.Stream;
 
-public class BarrelBlock extends Block{
+public class BarrelBlock extends Block {
 	private static final VoxelShape SHAPE = Stream.of(
-			Block.makeCuboidShape(1, 0, 4, 15, 16, 12),
-			Block.makeCuboidShape(4, 0, 1, 12, 16, 15),
-			Block.makeCuboidShape(2, 0, 2, 14, 16, 14)
-	).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR)).get();
+			Block.box(1, 0, 4, 15, 16, 12),
+			Block.box(4, 0, 1, 12, 16, 15),
+			Block.box(2, 0, 2, 14, 16, 14)
+	).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-	public BarrelBlock(AbstractBlock.Properties properties) {
+	public BarrelBlock(Block.Properties properties) {
 		super(properties);
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 }

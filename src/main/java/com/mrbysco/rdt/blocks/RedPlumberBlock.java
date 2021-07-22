@@ -1,22 +1,22 @@
 package com.mrbysco.rdt.blocks;
 
 import com.mrbysco.rdt.blocks.base.BaseRotatable;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class RedPlumberBlock extends BaseRotatable{
-	private static final VoxelShape SHAPE = Block.makeCuboidShape(3, 0, 3, 13, 16, 13);
+	private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 16, 13);
 	
 	public RedPlumberBlock(Block.Properties builder) {
 		super(builder);
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 }

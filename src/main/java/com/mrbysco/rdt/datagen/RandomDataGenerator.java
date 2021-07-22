@@ -4,26 +4,26 @@ import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import com.mrbysco.rdt.Reference;
 import com.mrbysco.rdt.init.RandomRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.LootTableProvider;
-import net.minecraft.data.loot.BlockLootTables;
-import net.minecraft.item.Items;
-import net.minecraft.loot.ConstantRange;
-import net.minecraft.loot.LootParameterSet;
-import net.minecraft.loot.LootParameterSets;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.LootTable.Builder;
-import net.minecraft.loot.LootTableManager;
-import net.minecraft.loot.ValidationTracker;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTable.Builder;
+import net.minecraft.world.level.storage.loot.LootTables;
+import net.minecraft.world.level.storage.loot.ValidationContext;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.util.List;
 import java.util.Map;
@@ -56,60 +56,60 @@ public class RandomDataGenerator {
 		}
 
 		@Override
-		protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables() {
-			return ImmutableList.of(Pair.of(ForceBlocks::new, LootParameterSets.BLOCK));
+		protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootContextParamSet>> getTables() {
+			return ImmutableList.of(Pair.of(ForceBlocks::new, LootContextParamSets.BLOCK));
 		}
 
 		@Override
-		protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {
-			map.forEach((name, table) -> LootTableManager.validateLootTable(validationtracker, name, table));
+		protected void validate(Map<ResourceLocation, LootTable> map, ValidationContext validationtracker) {
+			map.forEach((name, table) -> LootTables.validate(validationtracker, name, table));
 		}
 
-		private class ForceBlocks extends BlockLootTables {
+		private class ForceBlocks extends BlockLoot {
 			@Override
 			protected void addTables() {
-				registerDropSelfLootTable(LAWNMOWER.get());
-				registerDropSelfLootTable(TOY_CASTLE.get());
+				dropSelf(LAWNMOWER.get());
+				dropSelf(TOY_CASTLE.get());
 
-				registerDropSelfLootTable(OAK_CRATE.get());
-				registerDropSelfLootTable(SPRUCE_CRATE.get());
-				registerDropSelfLootTable(BIRCH_CRATE.get());
-				registerDropSelfLootTable(JUNGLE_CRATE.get());
-				registerDropSelfLootTable(ACACIA_CRATE.get());
-				registerDropSelfLootTable(DARK_OAK_CRATE.get());
+				dropSelf(OAK_CRATE.get());
+				dropSelf(SPRUCE_CRATE.get());
+				dropSelf(BIRCH_CRATE.get());
+				dropSelf(JUNGLE_CRATE.get());
+				dropSelf(ACACIA_CRATE.get());
+				dropSelf(DARK_OAK_CRATE.get());
 
-				registerDropSelfLootTable(OAK_BARREL.get());
-				registerDropSelfLootTable(SPRUCE_BARREL.get());
-				registerDropSelfLootTable(BIRCH_BARREL.get());
-				registerDropSelfLootTable(JUNGLE_BARREL.get());
-				registerDropSelfLootTable(ACACIA_BARREL.get());
-				registerDropSelfLootTable(DARK_OAK_BARREL.get());
+				dropSelf(OAK_BARREL.get());
+				dropSelf(SPRUCE_BARREL.get());
+				dropSelf(BIRCH_BARREL.get());
+				dropSelf(JUNGLE_BARREL.get());
+				dropSelf(ACACIA_BARREL.get());
+				dropSelf(DARK_OAK_BARREL.get());
 
-				registerLootTable(OAK_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(OAK_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
 				});
-				registerLootTable(SPRUCE_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(SPRUCE_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
 				});
-				registerLootTable(BIRCH_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(BIRCH_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
 				});
-				registerLootTable(JUNGLE_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(JUNGLE_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
 				});
-				registerLootTable(ACACIA_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(ACACIA_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
 				});
-				registerLootTable(DARK_OAK_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(DARK_OAK_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
 				});
 
-				registerDropSelfLootTable(STRAWBERRY_CAKE.get());
-				registerDropSelfLootTable(RED_PLUMBER.get());
-				registerDropSelfLootTable(GREEN_PLUMBER.get());
-				registerDropSelfLootTable(VILLAGE_HUT_2.get());
-				registerDropSelfLootTable(VILLAGE_BLACKSMITH.get());
-				registerDropSelfLootTable(VILLAGE_BUTCHER.get());
+				dropSelf(STRAWBERRY_CAKE.get());
+				dropSelf(RED_PLUMBER.get());
+				dropSelf(GREEN_PLUMBER.get());
+				dropSelf(VILLAGE_HUT_2.get());
+				dropSelf(VILLAGE_BLACKSMITH.get());
+				dropSelf(VILLAGE_BUTCHER.get());
 			}
 
 			@Override

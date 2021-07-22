@@ -20,7 +20,7 @@ public class RandomDecorativeThings {
 		RandomRegistry.BLOCKS.register(eventBus);
 		RandomRegistry.ITEMS.register(eventBus);
 
-		DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
+		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
 			eventBus.addListener(ClientHandler::onClientSetup);
 			eventBus.addListener(ClientHandler::registerBlockColors);
 			eventBus.addListener(ClientHandler::registerItemColors);

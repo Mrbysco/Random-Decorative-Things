@@ -1,18 +1,12 @@
 package com.mrbysco.rdt.blocks;
 
-import com.mrbysco.rdt.RandomDecorativeThings;
-
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.level.block.Block;
 
 public class CrateBlock extends Block {
 	
 	//public static final int GUI_ID = 1;
 
-	public CrateBlock(AbstractBlock.Properties properties) {
+	public CrateBlock(Block.Properties properties) {
 		super(properties);
 //		super(Material.WOOD);
 	}

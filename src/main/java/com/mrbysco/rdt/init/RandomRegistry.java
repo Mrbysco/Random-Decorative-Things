@@ -13,13 +13,13 @@ import com.mrbysco.rdt.blocks.ToyCastleBlock;
 import com.mrbysco.rdt.blocks.villages.BlacksmithVillageBlock;
 import com.mrbysco.rdt.blocks.villages.VillageButcherBlock;
 import com.mrbysco.rdt.blocks.villages.VillageHut2Block;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -28,37 +28,37 @@ public class RandomRegistry {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 
 	public static final RegistryObject<Block> LAWNMOWER = BLOCKS.register("lawnmower", () ->
-			new LawnMowerBlock(Block.Properties.create(Material.WOOL, MaterialColor.RED).hardnessAndResistance(1.0F).sound(SoundType.CLOTH)));
+			new LawnMowerBlock(Block.Properties.of(Material.WOOL, MaterialColor.COLOR_RED).destroyTime(1.0F).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> TOY_CASTLE = BLOCKS.register("toy_castle", () ->
-			new ToyCastleBlock(Block.Properties.create(Material.CLAY, MaterialColor.LIGHT_GRAY).hardnessAndResistance(1.0F).sound(SoundType.STONE)));
+			new ToyCastleBlock(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_LIGHT_GRAY).destroyTime(1.0F).sound(SoundType.STONE)));
 
-	public static final RegistryObject<Block> OAK_CRATE = BLOCKS.register("oak_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> SPRUCE_CRATE = BLOCKS.register("spruce_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.OBSIDIAN).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> BIRCH_CRATE = BLOCKS.register("birch_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.SAND).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> JUNGLE_CRATE = BLOCKS.register("jungle_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.DIRT).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> ACACIA_CRATE = BLOCKS.register("acacia_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.ADOBE).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> DARK_OAK_CRATE = BLOCKS.register("dark_oak_crate", () -> new CrateBlock(Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> OAK_CRATE = BLOCKS.register("oak_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> SPRUCE_CRATE = BLOCKS.register("spruce_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_BLACK).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> BIRCH_CRATE = BLOCKS.register("birch_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> JUNGLE_CRATE = BLOCKS.register("jungle_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.DIRT).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> ACACIA_CRATE = BLOCKS.register("acacia_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> DARK_OAK_CRATE = BLOCKS.register("dark_oak_crate", () -> new CrateBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).destroyTime(3.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Block> OAK_BARREL = BLOCKS.register("oak_barrel", () -> new BarrelBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> SPRUCE_BARREL = BLOCKS.register("spruce_barrel", () -> new BarrelBlock(Block.Properties.create(Material.WOOD, MaterialColor.OBSIDIAN).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> BIRCH_BARREL = BLOCKS.register("birch_barrel", () -> new BarrelBlock(Block.Properties.create(Material.WOOD, MaterialColor.SAND).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> JUNGLE_BARREL = BLOCKS.register("jungle_barrel", () -> new BarrelBlock(Block.Properties.create(Material.WOOD, MaterialColor.DIRT).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> ACACIA_BARREL = BLOCKS.register("acacia_barrel", () -> new BarrelBlock(Block.Properties.create(Material.WOOD, MaterialColor.ADOBE).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> DARK_OAK_BARREL = BLOCKS.register("dark_oak_barrel", () -> new BarrelBlock(Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> OAK_BARREL = BLOCKS.register("oak_barrel", () -> new BarrelBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> SPRUCE_BARREL = BLOCKS.register("spruce_barrel", () -> new BarrelBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_BLACK).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> BIRCH_BARREL = BLOCKS.register("birch_barrel", () -> new BarrelBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> JUNGLE_BARREL = BLOCKS.register("jungle_barrel", () -> new BarrelBlock(Block.Properties.of(Material.WOOD, MaterialColor.DIRT).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> ACACIA_BARREL = BLOCKS.register("acacia_barrel", () -> new BarrelBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> DARK_OAK_BARREL = BLOCKS.register("dark_oak_barrel", () -> new BarrelBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).destroyTime(3.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Block> OAK_BOOKSHELF = BLOCKS.register("oak_bookshelf", () -> new BookshelfBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> SPRUCE_BOOKSHELF = BLOCKS.register("spruce_bookshelf", () -> new BookshelfBlock(Block.Properties.create(Material.WOOD, MaterialColor.OBSIDIAN).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> BIRCH_BOOKSHELF = BLOCKS.register("birch_bookshelf", () -> new BookshelfBlock(Block.Properties.create(Material.WOOD, MaterialColor.SAND).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> JUNGLE_BOOKSHELF = BLOCKS.register("jungle_bookshelf", () -> new BookshelfBlock(Block.Properties.create(Material.WOOD, MaterialColor.DIRT).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> ACACIA_BOOKSHELF = BLOCKS.register("acacia_bookshelf", () -> new BookshelfBlock(Block.Properties.create(Material.WOOD, MaterialColor.ADOBE).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> DARK_OAK_BOOKSHELF = BLOCKS.register("dark_oak_bookshelf", () -> new BookshelfBlock(Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> OAK_BOOKSHELF = BLOCKS.register("oak_bookshelf", () -> new BookshelfBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> SPRUCE_BOOKSHELF = BLOCKS.register("spruce_bookshelf", () -> new BookshelfBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_BLACK).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> BIRCH_BOOKSHELF = BLOCKS.register("birch_bookshelf", () -> new BookshelfBlock(Block.Properties.of(Material.WOOD, MaterialColor.SAND).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> JUNGLE_BOOKSHELF = BLOCKS.register("jungle_bookshelf", () -> new BookshelfBlock(Block.Properties.of(Material.WOOD, MaterialColor.DIRT).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> ACACIA_BOOKSHELF = BLOCKS.register("acacia_bookshelf", () -> new BookshelfBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> DARK_OAK_BOOKSHELF = BLOCKS.register("dark_oak_bookshelf", () -> new BookshelfBlock(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).destroyTime(3.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Block> STRAWBERRY_CAKE = BLOCKS.register("strawberry_cake", () -> new StrawBerryCakeBlock(Block.Properties.create(Material.CAKE).hardnessAndResistance(1.0F).sound(SoundType.CLOTH)));
-	public static final RegistryObject<Block> RED_PLUMBER = BLOCKS.register("red_plumber", () -> new RedPlumberBlock(Block.Properties.create(Material.CLAY, MaterialColor.RED).hardnessAndResistance(1.0F).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> GREEN_PLUMBER = BLOCKS.register("green_plumber", () -> new GreenPlumberBlock(Block.Properties.create(Material.CLAY, MaterialColor.GREEN).hardnessAndResistance(1.0F).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> VILLAGE_HUT_2 = BLOCKS.register("village_hut_2", () -> new VillageHut2Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> VILLAGE_BLACKSMITH = BLOCKS.register("village_blacksmith", () -> new BlacksmithVillageBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> VILLAGE_BUTCHER = BLOCKS.register("village_butcher", () -> new VillageButcherBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> STRAWBERRY_CAKE = BLOCKS.register("strawberry_cake", () -> new StrawBerryCakeBlock(Block.Properties.of(Material.CAKE).destroyTime(1.0F).sound(SoundType.WOOL)));
+	public static final RegistryObject<Block> RED_PLUMBER = BLOCKS.register("red_plumber", () -> new RedPlumberBlock(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_RED).destroyTime(1.0F).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> GREEN_PLUMBER = BLOCKS.register("green_plumber", () -> new GreenPlumberBlock(Block.Properties.of(Material.CLAY, MaterialColor.COLOR_GREEN).destroyTime(1.0F).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> VILLAGE_HUT_2 = BLOCKS.register("village_hut_2", () -> new VillageHut2Block(Block.Properties.of(Material.WOOD).destroyTime(1.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> VILLAGE_BLACKSMITH = BLOCKS.register("village_blacksmith", () -> new BlacksmithVillageBlock(Block.Properties.of(Material.WOOD).destroyTime(1.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> VILLAGE_BUTCHER = BLOCKS.register("village_butcher", () -> new VillageButcherBlock(Block.Properties.of(Material.WOOD).destroyTime(1.0F).sound(SoundType.WOOD)));
 
 	public static final RegistryObject<Item> LAWNMOWER_ITEM = ITEMS.register("lawnmower", () -> new BlockItem(LAWNMOWER.get(), itemBuilder()));
 	public static final RegistryObject<Item> TOY_CASTLE_ITEM = ITEMS.register("toy_castle", () -> new BlockItem(TOY_CASTLE.get(), itemBuilder()));
@@ -92,6 +92,6 @@ public class RandomRegistry {
 	public static final RegistryObject<Item> VILLAGE_BUTCHER_ITEM = ITEMS.register("village_butcher", () -> new BlockItem(VILLAGE_BUTCHER.get(), itemBuilder()));
 
 	private static Item.Properties itemBuilder() {
-		return new Item.Properties().group(RandomTabs.MAIN_TAB);
+		return new Item.Properties().tab(RandomTabs.MAIN_TAB);
 	}
 }

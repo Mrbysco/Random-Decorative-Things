@@ -1,20 +1,18 @@
 package com.mrbysco.rdt.blocks;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorldReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class BookshelfBlock extends Block{
 
-	public BookshelfBlock(AbstractBlock.Properties properties) {
+	public BookshelfBlock(Block.Properties properties) {
 		super(properties);
 	}
 
 	@Override
-	public float getEnchantPowerBonus(BlockState state, IWorldReader world, BlockPos pos) {
+	public float getEnchantPowerBonus(BlockState state, LevelReader world, BlockPos pos) {
 		return 1;
 	}
-
 }
