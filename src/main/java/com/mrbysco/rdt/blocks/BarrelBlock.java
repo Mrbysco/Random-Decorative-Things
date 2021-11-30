@@ -14,10 +14,10 @@ import java.util.stream.Stream;
 
 public class BarrelBlock extends Block{
 	private static final VoxelShape SHAPE = Stream.of(
-			Block.makeCuboidShape(1, 0, 4, 15, 16, 12),
-			Block.makeCuboidShape(4, 0, 1, 12, 16, 15),
-			Block.makeCuboidShape(2, 0, 2, 14, 16, 14)
-	).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR)).get();
+			Block.box(1, 0, 4, 15, 16, 12),
+			Block.box(4, 0, 1, 12, 16, 15),
+			Block.box(2, 0, 2, 14, 16, 14)
+	).reduce((v1, v2) -> VoxelShapes.join(v1, v2, IBooleanFunction.OR)).get();
 
 	public BarrelBlock(AbstractBlock.Properties properties) {
 		super(properties);

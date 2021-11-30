@@ -9,7 +9,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
 public class GreenPlumberBlock extends BaseRotatable{
-	private static final VoxelShape SHAPE = Block.makeCuboidShape(3, 0, 3, 13, 16, 13);
+	private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 16, 13);
 
 	public GreenPlumberBlock(Block.Properties builder) {
 		super(builder);

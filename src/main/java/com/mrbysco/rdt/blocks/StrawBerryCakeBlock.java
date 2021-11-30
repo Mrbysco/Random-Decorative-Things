@@ -10,7 +10,7 @@ import net.minecraft.world.IBlockReader;
 
 public class StrawBerryCakeBlock extends Block{
 
-	private static final VoxelShape CAKE_SHAPE = Block.makeCuboidShape(1, 0, 1, 15, 6, 15);
+	private static final VoxelShape CAKE_SHAPE = Block.box(1, 0, 1, 15, 6, 15);
 	
 	public StrawBerryCakeBlock(AbstractBlock.Properties properties) {
 		super(properties);

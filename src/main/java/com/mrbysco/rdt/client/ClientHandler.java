@@ -15,16 +15,16 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientHandler {
 
 	public static void onClientSetup(final FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(RandomRegistry.STRAWBERRY_CAKE.get(), RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(RandomRegistry.VILLAGE_BUTCHER.get(), RenderType.getCutoutMipped());
-		RenderTypeLookup.setRenderLayer(RandomRegistry.VILLAGE_BLACKSMITH.get(), RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(RandomRegistry.VILLAGE_HUT_2.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(RandomRegistry.STRAWBERRY_CAKE.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(RandomRegistry.VILLAGE_BUTCHER.get(), RenderType.cutoutMipped());
+		RenderTypeLookup.setRenderLayer(RandomRegistry.VILLAGE_BLACKSMITH.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(RandomRegistry.VILLAGE_HUT_2.get(), RenderType.cutout());
 	}
 
 	public static void registerBlockColors(final ColorHandlerEvent.Block event) {
 		BlockColors colors = event.getBlockColors();
 
-		colors.register((state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getGrassColor(reader, pos) : GrassColors.get(0.5D, 1.0D), RandomRegistry.VILLAGE_BUTCHER.get());
+		colors.register((state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageGrassColor(reader, pos) : GrassColors.get(0.5D, 1.0D), RandomRegistry.VILLAGE_BUTCHER.get());
 	}
 
 	public static void registerItemColors(final ColorHandlerEvent.Item event) {
@@ -32,7 +32,7 @@ public class ClientHandler {
 		BlockColors blockColors = event.getBlockColors();
 
 		colors.register((stack, tintIndex) -> {
-			BlockState state = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
+			BlockState state = ((BlockItem) stack.getItem()).getBlock().defaultBlockState();
 			return blockColors.getColor(state, null, null, tintIndex);
 		}, RandomRegistry.VILLAGE_BUTCHER.get());
 	}

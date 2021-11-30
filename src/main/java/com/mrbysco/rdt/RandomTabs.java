@@ -9,7 +9,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class RandomTabs {
 	public static final ItemGroup MAIN_TAB = new ItemGroup(Reference.MOD_ID) {
 		@OnlyIn(Dist.CLIENT)
-		public ItemStack createIcon() {
+		public ItemStack makeIcon() {
 			return new ItemStack(RandomRegistry.VILLAGE_BUTCHER.get());
 		}
 	};

@@ -62,54 +62,54 @@ public class RandomDataGenerator {
 
 		@Override
 		protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker) {
-			map.forEach((name, table) -> LootTableManager.validateLootTable(validationtracker, name, table));
+			map.forEach((name, table) -> LootTableManager.validate(validationtracker, name, table));
 		}
 
 		private class ForceBlocks extends BlockLootTables {
 			@Override
 			protected void addTables() {
-				registerDropSelfLootTable(LAWNMOWER.get());
-				registerDropSelfLootTable(TOY_CASTLE.get());
+				dropSelf(LAWNMOWER.get());
+				dropSelf(TOY_CASTLE.get());
 
-				registerDropSelfLootTable(OAK_CRATE.get());
-				registerDropSelfLootTable(SPRUCE_CRATE.get());
-				registerDropSelfLootTable(BIRCH_CRATE.get());
-				registerDropSelfLootTable(JUNGLE_CRATE.get());
-				registerDropSelfLootTable(ACACIA_CRATE.get());
-				registerDropSelfLootTable(DARK_OAK_CRATE.get());
+				dropSelf(OAK_CRATE.get());
+				dropSelf(SPRUCE_CRATE.get());
+				dropSelf(BIRCH_CRATE.get());
+				dropSelf(JUNGLE_CRATE.get());
+				dropSelf(ACACIA_CRATE.get());
+				dropSelf(DARK_OAK_CRATE.get());
 
-				registerDropSelfLootTable(OAK_BARREL.get());
-				registerDropSelfLootTable(SPRUCE_BARREL.get());
-				registerDropSelfLootTable(BIRCH_BARREL.get());
-				registerDropSelfLootTable(JUNGLE_BARREL.get());
-				registerDropSelfLootTable(ACACIA_BARREL.get());
-				registerDropSelfLootTable(DARK_OAK_BARREL.get());
+				dropSelf(OAK_BARREL.get());
+				dropSelf(SPRUCE_BARREL.get());
+				dropSelf(BIRCH_BARREL.get());
+				dropSelf(JUNGLE_BARREL.get());
+				dropSelf(ACACIA_BARREL.get());
+				dropSelf(DARK_OAK_BARREL.get());
 
-				registerLootTable(OAK_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(OAK_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantRange.exactly(3));
 				});
-				registerLootTable(SPRUCE_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(SPRUCE_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantRange.exactly(3));
 				});
-				registerLootTable(BIRCH_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(BIRCH_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantRange.exactly(3));
 				});
-				registerLootTable(JUNGLE_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(JUNGLE_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantRange.exactly(3));
 				});
-				registerLootTable(ACACIA_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(ACACIA_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantRange.exactly(3));
 				});
-				registerLootTable(DARK_OAK_BOOKSHELF.get(), (bookshelf) -> {
-					return droppingWithSilkTouchOrRandomly(bookshelf, Items.BOOK, ConstantRange.of(3));
+				add(DARK_OAK_BOOKSHELF.get(), (bookshelf) -> {
+					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantRange.exactly(3));
 				});
 
-				registerDropSelfLootTable(STRAWBERRY_CAKE.get());
-				registerDropSelfLootTable(RED_PLUMBER.get());
-				registerDropSelfLootTable(GREEN_PLUMBER.get());
-				registerDropSelfLootTable(VILLAGE_HUT_2.get());
-				registerDropSelfLootTable(VILLAGE_BLACKSMITH.get());
-				registerDropSelfLootTable(VILLAGE_BUTCHER.get());
+				dropSelf(STRAWBERRY_CAKE.get());
+				dropSelf(RED_PLUMBER.get());
+				dropSelf(GREEN_PLUMBER.get());
+				dropSelf(VILLAGE_HUT_2.get());
+				dropSelf(VILLAGE_BLACKSMITH.get());
+				dropSelf(VILLAGE_BUTCHER.get());
 			}
 
 			@Override
