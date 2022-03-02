@@ -1,5 +1,6 @@
 package com.mrbysco.rdt;
 
+import com.mojang.logging.LogUtils;
 import com.mrbysco.rdt.client.ClientHandler;
 import com.mrbysco.rdt.init.RandomRegistry;
 import net.minecraftforge.api.distmarker.Dist;
@@ -7,12 +8,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 
 @Mod(Reference.MOD_ID)
 public class RandomDecorativeThings {
-	public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);
+	public static final Logger LOGGER = LogUtils.getLogger();
 
 	public RandomDecorativeThings() {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
