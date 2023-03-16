@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "randomdecorativethings:blocks/vertical_dark_oak",
-		"texture": "randomdecorativethings:blocks/vertical_dark_oak",
-		"anvil_base": "randomdecorativethings:blocks/metal"
+		"particle": "randomdecorativethings:block/vertical_dark_oak",
+		"texture": "randomdecorativethings:block/vertical_dark_oak",
+		"anvil_base": "randomdecorativethings:block/metal"
 	},
 	"elements": [
 		{

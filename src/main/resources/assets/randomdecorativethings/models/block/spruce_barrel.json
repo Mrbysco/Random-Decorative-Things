@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "randomdecorativethings:blocks/vertical_spruce",
-		"texture": "randomdecorativethings:blocks/vertical_spruce",
-		"anvil_base": "randomdecorativethings:blocks/metal"
+		"particle": "randomdecorativethings:block/vertical_spruce",
+		"texture": "randomdecorativethings:block/vertical_spruce",
+		"anvil_base": "randomdecorativethings:block/metal"
 	},
 	"elements": [
 		{

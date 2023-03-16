@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"bookshelf": "randomdecorativethings:blocks/books",
+		"bookshelf": "randomdecorativethings:block/books",
 		"particle": "block/jungle_planks",
 		"planks": "block/jungle_planks"
 	},
@@ -236,8 +236,8 @@
 			"faces": {
 				"north": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
 				"east": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
-				"south": {"uv": [13, 2, 11, 7], "texture": "#missing"},
-				"west": {"uv": [13, 1, 14, 7], "texture": "#missing"},
+				"south": {"uv": [13, 2, 11, 7], "texture": "#planks"},
+				"west": {"uv": [13, 1, 14, 7], "texture": "#planks"},
 				"up": {"uv": [11, 3, 12, 4], "rotation": 180, "texture": "#bookshelf"}
 			}
 		},
@@ -333,7 +333,7 @@
 			"faces": {
 				"north": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"east": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
-				"south": {"uv": [9, 11, 10, 15], "texture": "#missing"},
+				"south": {"uv": [9, 11, 10, 15], "texture": "#planks"},
 				"west": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"up": {"uv": [9, 11, 10, 12], "rotation": 180, "texture": "#bookshelf"}
 			}
@@ -484,8 +484,8 @@
 			"to": [12, 13, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.11905, 7, 13.86429]},
 			"faces": {
-				"north": {"uv": [13, 2, 11, 7], "texture": "#missing"},
-				"east": {"uv": [13, 1, 14, 7], "texture": "#missing"},
+				"north": {"uv": [13, 2, 11, 7], "texture": "#planks"},
+				"east": {"uv": [13, 1, 14, 7], "texture": "#planks"},
 				"south": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
 				"west": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
 				"up": {"uv": [11, 3, 12, 4], "texture": "#bookshelf"}
@@ -580,7 +580,7 @@
 			"to": [10, 5, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.11905, 7, 13.86429]},
 			"faces": {
-				"north": {"uv": [9, 11, 10, 15], "texture": "#missing"},
+				"north": {"uv": [9, 11, 10, 15], "texture": "#planks"},
 				"east": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"south": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"west": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
@@ -735,8 +735,8 @@
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.11905, 7, 8.01429]},
 			"faces": {
 				"north": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
-				"east": {"uv": [13, 2, 11, 7], "texture": "#missing"},
-				"south": {"uv": [13, 1, 14, 7], "texture": "#missing"},
+				"east": {"uv": [13, 2, 11, 7], "texture": "#planks"},
+				"south": {"uv": [13, 1, 14, 7], "texture": "#planks"},
 				"west": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
 				"up": {"uv": [11, 3, 12, 4], "rotation": 90, "texture": "#bookshelf"}
 			}
@@ -831,7 +831,7 @@
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.11905, 7, 8.01429]},
 			"faces": {
 				"north": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
-				"east": {"uv": [9, 11, 10, 15], "texture": "#missing"},
+				"east": {"uv": [9, 11, 10, 15], "texture": "#planks"},
 				"south": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"west": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"up": {"uv": [9, 11, 10, 12], "rotation": 90, "texture": "#bookshelf"}
@@ -986,10 +986,10 @@
 			"to": [16.10476, 13, 5.13333],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.11905, 7, 8.01429]},
 			"faces": {
-				"north": {"uv": [13, 1, 14, 7], "texture": "#missing"},
+				"north": {"uv": [13, 1, 14, 7], "texture": "#planks"},
 				"east": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
 				"south": {"uv": [11, 3, 12, 7], "texture": "#bookshelf"},
-				"west": {"uv": [13, 2, 11, 7], "texture": "#missing"},
+				"west": {"uv": [13, 2, 11, 7], "texture": "#planks"},
 				"up": {"uv": [11, 3, 12, 4], "rotation": 270, "texture": "#bookshelf"}
 			}
 		},
@@ -1086,7 +1086,7 @@
 				"north": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"east": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
 				"south": {"uv": [9, 11, 10, 15], "texture": "#bookshelf"},
-				"west": {"uv": [9, 11, 10, 15], "texture": "#missing"},
+				"west": {"uv": [9, 11, 10, 15], "texture": "#planks"},
 				"up": {"uv": [9, 11, 10, 12], "rotation": 270, "texture": "#bookshelf"}
 			}
 		},

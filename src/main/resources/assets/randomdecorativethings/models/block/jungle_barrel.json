@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "randomdecorativethings:blocks/vertical_jungle",
-		"texture": "randomdecorativethings:blocks/vertical_jungle",
-		"anvil_base": "randomdecorativethings:blocks/metal"
+		"particle": "randomdecorativethings:block/vertical_jungle",
+		"texture": "randomdecorativethings:block/vertical_jungle",
+		"anvil_base": "randomdecorativethings:block/metal"
 	},
 	"elements": [
 		{

@@ -8,9 +8,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class RedPlumberBlock extends BaseRotatable{
+public class RedPlumberBlock extends BaseRotatable {
 	private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 16, 13);
-	
+
 	public RedPlumberBlock(Block.Properties builder) {
 		super(builder);
 	}

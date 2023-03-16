@@ -1,10 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"snow": "randomdecorativethings:blocks/strawberry_cake_filling",
-		"hardened_clay_stained_white": "randomdecorativethings:blocks/strawberry_cake_frosting",
-		"red_sandstone_top": "randomdecorativethings:blocks/strawberry_cake",
-		"hardened_clay_stained_pink": "randomdecorativethings:blocks/strawberry_cake_bery"
+		"particle": "randomdecorativethings:block/strawberry_cake_frosting",
+		"snow": "randomdecorativethings:block/strawberry_cake_filling",
+		"hardened_clay_stained_white": "randomdecorativethings:block/strawberry_cake_frosting",
+		"red_sandstone_top": "randomdecorativethings:block/strawberry_cake",
+		"hardened_clay_stained_pink": "randomdecorativethings:block/strawberry_cake_bery"
 	},
 	"elements": [
 		{

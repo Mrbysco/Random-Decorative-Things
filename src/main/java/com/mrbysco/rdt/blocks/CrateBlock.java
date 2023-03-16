@@ -3,7 +3,7 @@ package com.mrbysco.rdt.blocks;
 import net.minecraft.world.level.block.Block;
 
 public class CrateBlock extends Block {
-	
+
 	//public static final int GUI_ID = 1;
 
 	public CrateBlock(Block.Properties properties) {

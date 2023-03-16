@@ -1,12 +1,12 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"Shoes": "randomdecorativethings:blocks/plumber_brown",
-		"particle": "randomdecorativethings:blocks/plumber_red",
-		"Overal1": "randomdecorativethings:blocks/plumber_red",
-		"Overal2": "randomdecorativethings:blocks/plumber_light_blue",
-		"Skin": "randomdecorativethings:blocks/plumber_white",
-		"Mustachio": "randomdecorativethings:blocks/plumber_brown_2"
+		"Shoes": "randomdecorativethings:block/plumber_brown",
+		"particle": "randomdecorativethings:block/plumber_red",
+		"Overal1": "randomdecorativethings:block/plumber_red",
+		"Overal2": "randomdecorativethings:block/plumber_light_blue",
+		"Skin": "randomdecorativethings:block/plumber_white",
+		"Mustachio": "randomdecorativethings:block/plumber_brown_2"
 	},
 	"elements": [
 		{
