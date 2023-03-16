@@ -1,3 +1,6 @@
+[![build](https://github.com/Mrbysco/random-decorative-things/actions/workflows/build.yml/badge.svg)](https://github.com/Mrbysco/random-decorative-things/actions/workflows/build.yml)
+[![](http://cf.way2muchnoise.eu/versions/252494.svg)](https://www.curseforge.com/minecraft/mc-mods/random-decorative-things)
+[![](https://modrinth-utils.vercel.app/api/badge/versions?id=3G5DURZd)](https://modrinth.com/mod/random-decorative-things)
 # Random Decorative Things #
 
 ## About ##
@@ -9,4 +12,4 @@ Random Decorative Things was an idea I got after wanting to make more decorative
   - [![License](https://img.shields.io/badge/License-MIT-red.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 ## Downloads ##
-Downloads can be found on CurseForge at https://minecraft.curseforge.com/projects/random-decorative-things
+Downloads will be located on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/random-decorative-things)
