@@ -1,6 +1,5 @@
 [![build](https://github.com/Mrbysco/random-decorative-things/actions/workflows/build.yml/badge.svg)](https://github.com/Mrbysco/random-decorative-things/actions/workflows/build.yml)
 [![](http://cf.way2muchnoise.eu/versions/252494.svg)](https://www.curseforge.com/minecraft/mc-mods/random-decorative-things)
-[![](https://modrinth-utils.vercel.app/api/badge/versions?id=3G5DURZd)](https://modrinth.com/mod/random-decorative-things)
 # Random Decorative Things #
 
 ## About ##
