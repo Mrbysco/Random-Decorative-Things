@@ -6,7 +6,7 @@ if (System.getenv().MODRINTH_KEY) {
         token = System.getenv().MODRINTH_KEY
         projectId = project.modrinth_id
         versionType = "beta"
-        versionName = "Random Decorative Things ${mc_version}"
+        versionName = "${mod_name} ${mc_version}"
         versionNumber = project.version
         uploadFile = jar
         changelog = fileContents
