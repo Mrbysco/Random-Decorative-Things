@@ -7,10 +7,10 @@ if (System.getenv().CURSEFORGE_KEY) {
             id = project.curseforge_id
             releaseType = "beta"
             addGameVersion "Forge"
-            addGameVersion "1.19.2"
+            addGameVersion "${mc_version}"
             addGameVersion "Java 17"
             mainArtifact(jar)
-            changelog = file('CHANGELOG.md')
+            changelog = file('changelog.md')
             changelogType = 'markdown'
         }
     }
