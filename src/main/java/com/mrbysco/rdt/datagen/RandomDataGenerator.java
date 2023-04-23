@@ -31,33 +31,6 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import static com.mrbysco.rdt.init.RandomRegistry.ACACIA_BARREL;
-import static com.mrbysco.rdt.init.RandomRegistry.ACACIA_BOOKSHELF;
-import static com.mrbysco.rdt.init.RandomRegistry.ACACIA_CRATE;
-import static com.mrbysco.rdt.init.RandomRegistry.BIRCH_BARREL;
-import static com.mrbysco.rdt.init.RandomRegistry.BIRCH_BOOKSHELF;
-import static com.mrbysco.rdt.init.RandomRegistry.BIRCH_CRATE;
-import static com.mrbysco.rdt.init.RandomRegistry.DARK_OAK_BARREL;
-import static com.mrbysco.rdt.init.RandomRegistry.DARK_OAK_BOOKSHELF;
-import static com.mrbysco.rdt.init.RandomRegistry.DARK_OAK_CRATE;
-import static com.mrbysco.rdt.init.RandomRegistry.GREEN_PLUMBER;
-import static com.mrbysco.rdt.init.RandomRegistry.JUNGLE_BARREL;
-import static com.mrbysco.rdt.init.RandomRegistry.JUNGLE_BOOKSHELF;
-import static com.mrbysco.rdt.init.RandomRegistry.JUNGLE_CRATE;
-import static com.mrbysco.rdt.init.RandomRegistry.LAWNMOWER;
-import static com.mrbysco.rdt.init.RandomRegistry.OAK_BARREL;
-import static com.mrbysco.rdt.init.RandomRegistry.OAK_BOOKSHELF;
-import static com.mrbysco.rdt.init.RandomRegistry.OAK_CRATE;
-import static com.mrbysco.rdt.init.RandomRegistry.RED_PLUMBER;
-import static com.mrbysco.rdt.init.RandomRegistry.SPRUCE_BARREL;
-import static com.mrbysco.rdt.init.RandomRegistry.SPRUCE_BOOKSHELF;
-import static com.mrbysco.rdt.init.RandomRegistry.SPRUCE_CRATE;
-import static com.mrbysco.rdt.init.RandomRegistry.STRAWBERRY_CAKE;
-import static com.mrbysco.rdt.init.RandomRegistry.TOY_CASTLE;
-import static com.mrbysco.rdt.init.RandomRegistry.VILLAGE_BLACKSMITH;
-import static com.mrbysco.rdt.init.RandomRegistry.VILLAGE_BUTCHER;
-import static com.mrbysco.rdt.init.RandomRegistry.VILLAGE_HUT_2;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RandomDataGenerator {
 	@SubscribeEvent
@@ -93,48 +66,36 @@ public class RandomDataGenerator {
 		private class ForceBlocks extends BlockLoot {
 			@Override
 			protected void addTables() {
-				dropSelf(LAWNMOWER.get());
-				dropSelf(TOY_CASTLE.get());
+				dropSelf(RandomRegistry.LAWNMOWER.get());
+				dropSelf(RandomRegistry.TOY_CASTLE.get());
 
-				dropSelf(OAK_CRATE.get());
-				dropSelf(SPRUCE_CRATE.get());
-				dropSelf(BIRCH_CRATE.get());
-				dropSelf(JUNGLE_CRATE.get());
-				dropSelf(ACACIA_CRATE.get());
-				dropSelf(DARK_OAK_CRATE.get());
+				dropSelf(RandomRegistry.OAK_CRATE.get());
+				dropSelf(RandomRegistry.SPRUCE_CRATE.get());
+				dropSelf(RandomRegistry.BIRCH_CRATE.get());
+				dropSelf(RandomRegistry.JUNGLE_CRATE.get());
+				dropSelf(RandomRegistry.ACACIA_CRATE.get());
+				dropSelf(RandomRegistry.DARK_OAK_CRATE.get());
 
-				dropSelf(OAK_BARREL.get());
-				dropSelf(SPRUCE_BARREL.get());
-				dropSelf(BIRCH_BARREL.get());
-				dropSelf(JUNGLE_BARREL.get());
-				dropSelf(ACACIA_BARREL.get());
-				dropSelf(DARK_OAK_BARREL.get());
+				dropSelf(RandomRegistry.OAK_BARREL.get());
+				dropSelf(RandomRegistry.SPRUCE_BARREL.get());
+				dropSelf(RandomRegistry.BIRCH_BARREL.get());
+				dropSelf(RandomRegistry.JUNGLE_BARREL.get());
+				dropSelf(RandomRegistry.ACACIA_BARREL.get());
+				dropSelf(RandomRegistry.DARK_OAK_BARREL.get());
 
-				add(OAK_BOOKSHELF.get(), (bookshelf) -> {
-					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
-				});
-				add(SPRUCE_BOOKSHELF.get(), (bookshelf) -> {
-					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
-				});
-				add(BIRCH_BOOKSHELF.get(), (bookshelf) -> {
-					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
-				});
-				add(JUNGLE_BOOKSHELF.get(), (bookshelf) -> {
-					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
-				});
-				add(ACACIA_BOOKSHELF.get(), (bookshelf) -> {
-					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
-				});
-				add(DARK_OAK_BOOKSHELF.get(), (bookshelf) -> {
-					return createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3));
-				});
+				add(RandomRegistry.OAK_BOOKSHELF.get(), (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
+				add(RandomRegistry.SPRUCE_BOOKSHELF.get(), (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
+				add(RandomRegistry.BIRCH_BOOKSHELF.get(), (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
+				add(RandomRegistry.JUNGLE_BOOKSHELF.get(), (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
+				add(RandomRegistry.ACACIA_BOOKSHELF.get(), (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
+				add(RandomRegistry.DARK_OAK_BOOKSHELF.get(), (bookshelf) -> createSingleItemTableWithSilkTouch(bookshelf, Items.BOOK, ConstantValue.exactly(3)));
 
-				dropSelf(STRAWBERRY_CAKE.get());
-				dropSelf(RED_PLUMBER.get());
-				dropSelf(GREEN_PLUMBER.get());
-				dropSelf(VILLAGE_HUT_2.get());
-				dropSelf(VILLAGE_BLACKSMITH.get());
-				dropSelf(VILLAGE_BUTCHER.get());
+				dropSelf(RandomRegistry.STRAWBERRY_CAKE.get());
+				dropSelf(RandomRegistry.RED_PLUMBER.get());
+				dropSelf(RandomRegistry.GREEN_PLUMBER.get());
+				dropSelf(RandomRegistry.VILLAGE_HUT_2.get());
+				dropSelf(RandomRegistry.VILLAGE_BLACKSMITH.get());
+				dropSelf(RandomRegistry.VILLAGE_BUTCHER.get());
 			}
 
 			@Override
@@ -153,36 +114,36 @@ public class RandomDataGenerator {
 		protected void addTranslations() {
 			add("itemGroup.randomdecorativethings", "Random Decorative Things");
 
-			add(LAWNMOWER.get(), "Lawnmower");
-			add(TOY_CASTLE.get(), "Toy Castle");
+			add(RandomRegistry.LAWNMOWER.get(), "Lawnmower");
+			add(RandomRegistry.TOY_CASTLE.get(), "Toy Castle");
 
-			add(OAK_CRATE.get(), "Oak Crate");
-			add(SPRUCE_CRATE.get(), "Spruce Crate");
-			add(BIRCH_CRATE.get(), "Birch Crate");
-			add(JUNGLE_CRATE.get(), "Jungle Crate");
-			add(ACACIA_CRATE.get(), "Acacia Crate");
-			add(DARK_OAK_CRATE.get(), "Dark Oak Crate");
+			add(RandomRegistry.OAK_CRATE.get(), "Oak Crate");
+			add(RandomRegistry.SPRUCE_CRATE.get(), "Spruce Crate");
+			add(RandomRegistry.BIRCH_CRATE.get(), "Birch Crate");
+			add(RandomRegistry.JUNGLE_CRATE.get(), "Jungle Crate");
+			add(RandomRegistry.ACACIA_CRATE.get(), "Acacia Crate");
+			add(RandomRegistry.DARK_OAK_CRATE.get(), "Dark Oak Crate");
 
-			add(OAK_BARREL.get(), "Oak Barrel");
-			add(SPRUCE_BARREL.get(), "Spruce Barrel");
-			add(BIRCH_BARREL.get(), "Birch Barrel");
-			add(JUNGLE_BARREL.get(), "Jungle Barrel");
-			add(ACACIA_BARREL.get(), "Acacia Barrel");
-			add(DARK_OAK_BARREL.get(), "Dark Oak Barrel");
+			add(RandomRegistry.OAK_BARREL.get(), "Oak Barrel");
+			add(RandomRegistry.SPRUCE_BARREL.get(), "Spruce Barrel");
+			add(RandomRegistry.BIRCH_BARREL.get(), "Birch Barrel");
+			add(RandomRegistry.JUNGLE_BARREL.get(), "Jungle Barrel");
+			add(RandomRegistry.ACACIA_BARREL.get(), "Acacia Barrel");
+			add(RandomRegistry.DARK_OAK_BARREL.get(), "Dark Oak Barrel");
 
-			add(OAK_BOOKSHELF.get(), "Oak Bookshelf");
-			add(SPRUCE_BOOKSHELF.get(), "Spruce Bookshelf");
-			add(BIRCH_BOOKSHELF.get(), "Birch Bookshelf");
-			add(JUNGLE_BOOKSHELF.get(), "Jungle Bookshelf");
-			add(ACACIA_BOOKSHELF.get(), "Acacia Bookshelf");
-			add(DARK_OAK_BOOKSHELF.get(), "Dark Oak Bookshelf");
+			add(RandomRegistry.OAK_BOOKSHELF.get(), "Oak Bookshelf");
+			add(RandomRegistry.SPRUCE_BOOKSHELF.get(), "Spruce Bookshelf");
+			add(RandomRegistry.BIRCH_BOOKSHELF.get(), "Birch Bookshelf");
+			add(RandomRegistry.JUNGLE_BOOKSHELF.get(), "Jungle Bookshelf");
+			add(RandomRegistry.ACACIA_BOOKSHELF.get(), "Acacia Bookshelf");
+			add(RandomRegistry.DARK_OAK_BOOKSHELF.get(), "Dark Oak Bookshelf");
 
-			add(STRAWBERRY_CAKE.get(), "Strawberry Cake");
-			add(RED_PLUMBER.get(), "Red Plumber");
-			add(GREEN_PLUMBER.get(), "Green Plumber");
-			add(VILLAGE_HUT_2.get(), "Village Hut 2");
-			add(VILLAGE_BLACKSMITH.get(), "Village Blacksmith");
-			add(VILLAGE_BUTCHER.get(), "Village Butcher");
+			add(RandomRegistry.STRAWBERRY_CAKE.get(), "Strawberry Cake");
+			add(RandomRegistry.RED_PLUMBER.get(), "Red Plumber");
+			add(RandomRegistry.GREEN_PLUMBER.get(), "Green Plumber");
+			add(RandomRegistry.VILLAGE_HUT_2.get(), "Village Hut 2");
+			add(RandomRegistry.VILLAGE_BLACKSMITH.get(), "Village Blacksmith");
+			add(RandomRegistry.VILLAGE_BUTCHER.get(), "Village Butcher");
 		}
 	}
 
