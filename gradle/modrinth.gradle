@@ -1,11 +1,11 @@
 apply plugin: "com.modrinth.minotaur"
 
 if (System.getenv().MODRINTH_KEY) {
-    String fileContents = new File("./", "changelog.md").text
+    String fileContents = file("$project.rootDir/changelog.md").text
     modrinth {
         token = System.getenv().MODRINTH_KEY
         projectId = project.modrinth_id
-        versionType = "beta"
+        versionType = "release"
         versionName = "${mod_name} ${mc_version}"
         versionNumber = project.version
         uploadFile = jar
