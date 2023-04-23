@@ -1,6 +1,5 @@
 package com.mrbysco.rdt.init;
 
-import com.mrbysco.rdt.RandomTabs;
 import com.mrbysco.rdt.Reference;
 import com.mrbysco.rdt.blocks.BarrelBlock;
 import com.mrbysco.rdt.blocks.BookshelfBlock;
@@ -92,6 +91,6 @@ public class RandomRegistry {
 	public static final RegistryObject<Item> VILLAGE_BUTCHER_ITEM = ITEMS.register("village_butcher", () -> new BlockItem(VILLAGE_BUTCHER.get(), itemBuilder()));
 
 	private static Item.Properties itemBuilder() {
-		return new Item.Properties().tab(RandomTabs.MAIN_TAB);
+		return new Item.Properties();
 	}
 }

@@ -19,6 +19,7 @@ public class RandomDecorativeThings {
 
 		RandomRegistry.BLOCKS.register(eventBus);
 		RandomRegistry.ITEMS.register(eventBus);
+		eventBus.register(new RandomTabs());
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
 			eventBus.addListener(ClientHandler::onClientSetup);
