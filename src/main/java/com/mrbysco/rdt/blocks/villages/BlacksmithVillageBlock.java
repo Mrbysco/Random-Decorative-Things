@@ -10,7 +10,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class BlacksmithVillageBlock extends BaseRotatable {
 	private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 6, 13);
-	
+
 	public BlacksmithVillageBlock(Block.Properties builder) {
 		super(builder);
 	}

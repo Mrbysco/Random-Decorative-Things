@@ -1,7 +1,7 @@
 package com.mrbysco.rdt.init;
 
 public class RDTItems {
-	
+
 //	public static Item woolbit;
 //	public static Item claybit;
 //	public static Item stonebit;

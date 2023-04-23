@@ -10,7 +10,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class VillageButcherBlock extends BaseRotatable {
 	private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 8, 14);
-	
+
 	public VillageButcherBlock(Block.Properties builder) {
 		super(builder);
 	}

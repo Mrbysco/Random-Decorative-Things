@@ -10,7 +10,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class VillageHut2Block extends BaseRotatable {
 	private static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 6, 12);
-	
+
 	public VillageHut2Block(Block.Properties builder) {
 		super(builder);
 	}

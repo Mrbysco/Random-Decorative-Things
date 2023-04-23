@@ -9,7 +9,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class GreenPlumberBlock extends BaseRotatable{
+public class GreenPlumberBlock extends BaseRotatable {
 	private static final VoxelShape SHAPE = Shapes.box(3, 0, 3, 13, 16, 13);
 
 	public GreenPlumberBlock(Block.Properties builder) {

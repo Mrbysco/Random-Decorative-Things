@@ -10,7 +10,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class StrawBerryCakeBlock extends Block {
 
 	private static final VoxelShape CAKE_SHAPE = Block.box(1, 0, 1, 15, 6, 15);
-	
+
 	public StrawBerryCakeBlock(Block.Properties properties) {
 		super(properties);
 	}

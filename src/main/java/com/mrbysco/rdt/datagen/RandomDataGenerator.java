@@ -31,7 +31,32 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import static com.mrbysco.rdt.init.RandomRegistry.*;
+import static com.mrbysco.rdt.init.RandomRegistry.ACACIA_BARREL;
+import static com.mrbysco.rdt.init.RandomRegistry.ACACIA_BOOKSHELF;
+import static com.mrbysco.rdt.init.RandomRegistry.ACACIA_CRATE;
+import static com.mrbysco.rdt.init.RandomRegistry.BIRCH_BARREL;
+import static com.mrbysco.rdt.init.RandomRegistry.BIRCH_BOOKSHELF;
+import static com.mrbysco.rdt.init.RandomRegistry.BIRCH_CRATE;
+import static com.mrbysco.rdt.init.RandomRegistry.DARK_OAK_BARREL;
+import static com.mrbysco.rdt.init.RandomRegistry.DARK_OAK_BOOKSHELF;
+import static com.mrbysco.rdt.init.RandomRegistry.DARK_OAK_CRATE;
+import static com.mrbysco.rdt.init.RandomRegistry.GREEN_PLUMBER;
+import static com.mrbysco.rdt.init.RandomRegistry.JUNGLE_BARREL;
+import static com.mrbysco.rdt.init.RandomRegistry.JUNGLE_BOOKSHELF;
+import static com.mrbysco.rdt.init.RandomRegistry.JUNGLE_CRATE;
+import static com.mrbysco.rdt.init.RandomRegistry.LAWNMOWER;
+import static com.mrbysco.rdt.init.RandomRegistry.OAK_BARREL;
+import static com.mrbysco.rdt.init.RandomRegistry.OAK_BOOKSHELF;
+import static com.mrbysco.rdt.init.RandomRegistry.OAK_CRATE;
+import static com.mrbysco.rdt.init.RandomRegistry.RED_PLUMBER;
+import static com.mrbysco.rdt.init.RandomRegistry.SPRUCE_BARREL;
+import static com.mrbysco.rdt.init.RandomRegistry.SPRUCE_BOOKSHELF;
+import static com.mrbysco.rdt.init.RandomRegistry.SPRUCE_CRATE;
+import static com.mrbysco.rdt.init.RandomRegistry.STRAWBERRY_CAKE;
+import static com.mrbysco.rdt.init.RandomRegistry.TOY_CASTLE;
+import static com.mrbysco.rdt.init.RandomRegistry.VILLAGE_BLACKSMITH;
+import static com.mrbysco.rdt.init.RandomRegistry.VILLAGE_BUTCHER;
+import static com.mrbysco.rdt.init.RandomRegistry.VILLAGE_HUT_2;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RandomDataGenerator {
