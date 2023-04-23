@@ -18,7 +18,7 @@ public class RandomTabs {
 		MAIN_TAB = event.registerCreativeModeTab(new ResourceLocation(Reference.MOD_ID, "tab"), builder ->
 				builder.icon(() -> new ItemStack(RandomRegistry.VILLAGE_BUTCHER.get()))
 						.title(Component.translatable("itemGroup.randomdecorativethings"))
-						.displayItems((features, output, hasPermissions) -> {
+						.displayItems((displayParameters, output) -> {
 							List<ItemStack> stacks = RandomRegistry.ITEMS.getEntries().stream()
 									.map(reg -> new ItemStack(reg.get())).toList();
 							output.acceptAll(stacks);
