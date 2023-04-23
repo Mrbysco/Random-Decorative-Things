@@ -8,9 +8,13 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
-apply plugin: 'net.minecraftforge.gradle'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-apply plugin: 'maven-publish'
+plugins {
+    id 'maven-publish'
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
+    id 'com.modrinth.minotaur' version "2.+"
+}
+apply plugin: 'net.minecraftforge.gradle'
 
 version = "${version}"
 group = "com.mrbysco.rdt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -140,3 +144,6 @@ publishing {
         }
     }
 }
+
+apply from: 'gradle/curseforge.gradle'
+apply from: 'gradle/modrinth.gradle'
