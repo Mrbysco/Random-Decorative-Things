@@ -1,0 +1,7 @@
+{
+  "parent": "randomdecorativethings:block/oak_bookshelf",
+  "textures": {
+    "particle": "minecraft:block/mangrove_planks",
+    "planks": "minecraft:block/mangrove_planks"
+  }
+}

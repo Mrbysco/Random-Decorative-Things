@@ -1,0 +1,7 @@
+{
+  "parent": "randomdecorativethings:block/oak_barrel",
+  "textures": {
+    "particle": "randomdecorativethings:block/vertical_cherry",
+    "texture": "randomdecorativethings:block/vertical_cherry"
+  }
+}

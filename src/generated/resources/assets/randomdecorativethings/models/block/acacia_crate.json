@@ -1,0 +1,7 @@
+{
+  "parent": "randomdecorativethings:block/oak_crate",
+  "textures": {
+    "particle": "minecraft:block/acacia_planks",
+    "texture": "minecraft:block/acacia_planks"
+  }
+}
