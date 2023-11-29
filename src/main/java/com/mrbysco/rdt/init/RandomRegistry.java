@@ -17,105 +17,101 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public class RandomRegistry {
-	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Reference.MOD_ID);
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
+	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Reference.MOD_ID);
+	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Reference.MOD_ID);
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Reference.MOD_ID);
 
-	public static final RegistryObject<Block> LAWNMOWER = BLOCKS.register("lawnmower", () ->
+	public static final DeferredBlock<LawnMowerBlock> LAWNMOWER = BLOCKS.register("lawnmower", () ->
 			new LawnMowerBlock(Block.Properties.of().mapColor(MapColor.COLOR_RED).destroyTime(1.0F).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> TOY_CASTLE = BLOCKS.register("toy_castle", () ->
+	public static final DeferredBlock<ToyCastleBlock> TOY_CASTLE = BLOCKS.register("toy_castle", () ->
 			new ToyCastleBlock(Block.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).destroyTime(1.0F).sound(SoundType.STONE)));
 
-	public static final RegistryObject<Block> OAK_CRATE = BLOCKS.register("oak_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> SPRUCE_CRATE = BLOCKS.register("spruce_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> BIRCH_CRATE = BLOCKS.register("birch_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.BIRCH_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> JUNGLE_CRATE = BLOCKS.register("jungle_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.JUNGLE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> ACACIA_CRATE = BLOCKS.register("acacia_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> DARK_OAK_CRATE = BLOCKS.register("dark_oak_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.DARK_OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> MANGROVE_CRATE = BLOCKS.register("mangrove_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.MANGROVE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> CHERRY_CRATE = BLOCKS.register("cherry_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.CHERRY_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> OAK_CRATE = BLOCKS.register("oak_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> SPRUCE_CRATE = BLOCKS.register("spruce_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> BIRCH_CRATE = BLOCKS.register("birch_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.BIRCH_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> JUNGLE_CRATE = BLOCKS.register("jungle_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.JUNGLE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> ACACIA_CRATE = BLOCKS.register("acacia_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> DARK_OAK_CRATE = BLOCKS.register("dark_oak_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.DARK_OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> MANGROVE_CRATE = BLOCKS.register("mangrove_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.MANGROVE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<CrateBlock> CHERRY_CRATE = BLOCKS.register("cherry_crate", () -> new CrateBlock(Block.Properties.copy(Blocks.CHERRY_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Block> OAK_BARREL = BLOCKS.register("oak_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> SPRUCE_BARREL = BLOCKS.register("spruce_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> BIRCH_BARREL = BLOCKS.register("birch_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.BIRCH_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> JUNGLE_BARREL = BLOCKS.register("jungle_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.JUNGLE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> ACACIA_BARREL = BLOCKS.register("acacia_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> DARK_OAK_BARREL = BLOCKS.register("dark_oak_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.DARK_OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> MANGROVE_BARREL = BLOCKS.register("mangrove_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.MANGROVE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> CHERRY_BARREL = BLOCKS.register("cherry_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.CHERRY_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> OAK_BARREL = BLOCKS.register("oak_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> SPRUCE_BARREL = BLOCKS.register("spruce_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> BIRCH_BARREL = BLOCKS.register("birch_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.BIRCH_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> JUNGLE_BARREL = BLOCKS.register("jungle_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.JUNGLE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> ACACIA_BARREL = BLOCKS.register("acacia_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> DARK_OAK_BARREL = BLOCKS.register("dark_oak_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.DARK_OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> MANGROVE_BARREL = BLOCKS.register("mangrove_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.MANGROVE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BarrelBlock> CHERRY_BARREL = BLOCKS.register("cherry_barrel", () -> new BarrelBlock(Block.Properties.copy(Blocks.CHERRY_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Block> OAK_BOOKSHELF = BLOCKS.register("oak_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> SPRUCE_BOOKSHELF = BLOCKS.register("spruce_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> BIRCH_BOOKSHELF = BLOCKS.register("birch_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.BIRCH_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> JUNGLE_BOOKSHELF = BLOCKS.register("jungle_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.JUNGLE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> ACACIA_BOOKSHELF = BLOCKS.register("acacia_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> DARK_OAK_BOOKSHELF = BLOCKS.register("dark_oak_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.DARK_OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> MANGROVE_BOOKSHELF = BLOCKS.register("mangrove_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.MANGROVE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> CHERRY_BOOKSHELF = BLOCKS.register("cherry_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.CHERRY_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> OAK_BOOKSHELF = BLOCKS.register("oak_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> SPRUCE_BOOKSHELF = BLOCKS.register("spruce_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> BIRCH_BOOKSHELF = BLOCKS.register("birch_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.BIRCH_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> JUNGLE_BOOKSHELF = BLOCKS.register("jungle_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.JUNGLE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> ACACIA_BOOKSHELF = BLOCKS.register("acacia_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> DARK_OAK_BOOKSHELF = BLOCKS.register("dark_oak_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.DARK_OAK_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> MANGROVE_BOOKSHELF = BLOCKS.register("mangrove_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.MANGROVE_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BookshelfBlock> CHERRY_BOOKSHELF = BLOCKS.register("cherry_bookshelf", () -> new BookshelfBlock(Block.Properties.copy(Blocks.CHERRY_PLANKS).destroyTime(3.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Block> STRAWBERRY_CAKE = BLOCKS.register("strawberry_cake", () -> new StrawBerryCakeBlock(Block.Properties.copy(Blocks.CAKE).destroyTime(1.0F).sound(SoundType.WOOL)));
-	public static final RegistryObject<Block> RED_PLUMBER = BLOCKS.register("red_plumber", () -> new RedPlumberBlock(Block.Properties.of().mapColor(MapColor.COLOR_RED).destroyTime(1.0F).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> GREEN_PLUMBER = BLOCKS.register("green_plumber", () -> new GreenPlumberBlock(Block.Properties.of().mapColor(MapColor.COLOR_GREEN).destroyTime(1.0F).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> VILLAGE_HUT_2 = BLOCKS.register("village_hut_2", () -> new VillageHut2Block(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(1.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> VILLAGE_BLACKSMITH = BLOCKS.register("village_blacksmith", () -> new BlacksmithVillageBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(1.0F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> VILLAGE_BUTCHER = BLOCKS.register("village_butcher", () -> new VillageButcherBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(1.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<StrawBerryCakeBlock> STRAWBERRY_CAKE = BLOCKS.register("strawberry_cake", () -> new StrawBerryCakeBlock(Block.Properties.copy(Blocks.CAKE).destroyTime(1.0F).sound(SoundType.WOOL)));
+	public static final DeferredBlock<RedPlumberBlock> RED_PLUMBER = BLOCKS.register("red_plumber", () -> new RedPlumberBlock(Block.Properties.of().mapColor(MapColor.COLOR_RED).destroyTime(1.0F).sound(SoundType.STONE)));
+	public static final DeferredBlock<GreenPlumberBlock> GREEN_PLUMBER = BLOCKS.register("green_plumber", () -> new GreenPlumberBlock(Block.Properties.of().mapColor(MapColor.COLOR_GREEN).destroyTime(1.0F).sound(SoundType.STONE)));
+	public static final DeferredBlock<VillageHut2Block> VILLAGE_HUT_2 = BLOCKS.register("village_hut_2", () -> new VillageHut2Block(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(1.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<BlacksmithVillageBlock> VILLAGE_BLACKSMITH = BLOCKS.register("village_blacksmith", () -> new BlacksmithVillageBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(1.0F).sound(SoundType.WOOD)));
+	public static final DeferredBlock<VillageButcherBlock> VILLAGE_BUTCHER = BLOCKS.register("village_butcher", () -> new VillageButcherBlock(Block.Properties.copy(Blocks.OAK_PLANKS).destroyTime(1.0F).sound(SoundType.WOOD)));
 
-	public static final RegistryObject<Item> LAWNMOWER_ITEM = ITEMS.register("lawnmower", () -> new BlockItem(LAWNMOWER.get(), itemBuilder()));
-	public static final RegistryObject<Item> TOY_CASTLE_ITEM = ITEMS.register("toy_castle", () -> new BlockItem(TOY_CASTLE.get(), itemBuilder()));
+	public static final DeferredItem<BlockItem> LAWNMOWER_ITEM = ITEMS.registerSimpleBlockItem(LAWNMOWER);
+	public static final DeferredItem<BlockItem> TOY_CASTLE_ITEM = ITEMS.registerSimpleBlockItem(TOY_CASTLE);
 
-	public static final RegistryObject<Item> OAK_CRATE_ITEM = ITEMS.register("oak_crate", () -> new BlockItem(OAK_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> SPRUCE_CRATE_ITEM = ITEMS.register("spruce_crate", () -> new BlockItem(SPRUCE_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> BIRCH_CRATE_ITEM = ITEMS.register("birch_crate", () -> new BlockItem(BIRCH_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> JUNGLE_CRATE_ITEM = ITEMS.register("jungle_crate", () -> new BlockItem(JUNGLE_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> ACACIA_CRATE_ITEM = ITEMS.register("acacia_crate", () -> new BlockItem(ACACIA_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> DARK_OAK_CRATE_ITEM = ITEMS.register("dark_oak_crate", () -> new BlockItem(DARK_OAK_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> MANGROVE_CRATE_ITEM = ITEMS.register("mangrove_crate", () -> new BlockItem(MANGROVE_CRATE.get(), itemBuilder()));
-	public static final RegistryObject<Item> CHERRY_CRATE_ITEM = ITEMS.register("cherry_crate", () -> new BlockItem(CHERRY_CRATE.get(), itemBuilder()));
+	public static final DeferredItem<BlockItem> OAK_CRATE_ITEM = ITEMS.registerSimpleBlockItem(OAK_CRATE);
+	public static final DeferredItem<BlockItem> SPRUCE_CRATE_ITEM = ITEMS.registerSimpleBlockItem(SPRUCE_CRATE);
+	public static final DeferredItem<BlockItem> BIRCH_CRATE_ITEM = ITEMS.registerSimpleBlockItem(BIRCH_CRATE);
+	public static final DeferredItem<BlockItem> JUNGLE_CRATE_ITEM = ITEMS.registerSimpleBlockItem(JUNGLE_CRATE);
+	public static final DeferredItem<BlockItem> ACACIA_CRATE_ITEM = ITEMS.registerSimpleBlockItem(ACACIA_CRATE);
+	public static final DeferredItem<BlockItem> DARK_OAK_CRATE_ITEM = ITEMS.registerSimpleBlockItem(DARK_OAK_CRATE);
+	public static final DeferredItem<BlockItem> MANGROVE_CRATE_ITEM = ITEMS.registerSimpleBlockItem(MANGROVE_CRATE);
+	public static final DeferredItem<BlockItem> CHERRY_CRATE_ITEM = ITEMS.registerSimpleBlockItem(CHERRY_CRATE);
 
-	public static final RegistryObject<Item> OAK_BARREL_ITEM = ITEMS.register("oak_barrel", () -> new BlockItem(OAK_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> SPRUCE_BARREL_ITEM = ITEMS.register("spruce_barrel", () -> new BlockItem(SPRUCE_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> BIRCH_BARREL_ITEM = ITEMS.register("birch_barrel", () -> new BlockItem(BIRCH_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> JUNGLE_BARREL_ITEM = ITEMS.register("jungle_barrel", () -> new BlockItem(JUNGLE_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> ACACIA_BARREL_ITEM = ITEMS.register("acacia_barrel", () -> new BlockItem(ACACIA_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> DARK_OAK_BARREL_ITEM = ITEMS.register("dark_oak_barrel", () -> new BlockItem(DARK_OAK_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> MANGROVE_BARREL_ITEM = ITEMS.register("mangrove_barrel", () -> new BlockItem(MANGROVE_BARREL.get(), itemBuilder()));
-	public static final RegistryObject<Item> CHERRY_BARREL_ITEM = ITEMS.register("cherry_barrel", () -> new BlockItem(CHERRY_BARREL.get(), itemBuilder()));
+	public static final DeferredItem<BlockItem> OAK_BARREL_ITEM = ITEMS.registerSimpleBlockItem(OAK_BARREL);
+	public static final DeferredItem<BlockItem> SPRUCE_BARREL_ITEM = ITEMS.registerSimpleBlockItem(SPRUCE_BARREL);
+	public static final DeferredItem<BlockItem> BIRCH_BARREL_ITEM = ITEMS.registerSimpleBlockItem(BIRCH_BARREL);
+	public static final DeferredItem<BlockItem> JUNGLE_BARREL_ITEM = ITEMS.registerSimpleBlockItem(JUNGLE_BARREL);
+	public static final DeferredItem<BlockItem> ACACIA_BARREL_ITEM = ITEMS.registerSimpleBlockItem(ACACIA_BARREL);
+	public static final DeferredItem<BlockItem> DARK_OAK_BARREL_ITEM = ITEMS.registerSimpleBlockItem(DARK_OAK_BARREL);
+	public static final DeferredItem<BlockItem> MANGROVE_BARREL_ITEM = ITEMS.registerSimpleBlockItem(MANGROVE_BARREL);
+	public static final DeferredItem<BlockItem> CHERRY_BARREL_ITEM = ITEMS.registerSimpleBlockItem(CHERRY_BARREL);
 
-	public static final RegistryObject<Item> OAK_BOOKSHELF_ITEM = ITEMS.register("oak_bookshelf", () -> new BlockItem(OAK_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> SPRUCE_BOOKSHELF_ITEM = ITEMS.register("spruce_bookshelf", () -> new BlockItem(SPRUCE_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> BIRCH_BOOKSHELF_ITEM = ITEMS.register("birch_bookshelf", () -> new BlockItem(BIRCH_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> JUNGLE_BOOKSHELF_ITEM = ITEMS.register("jungle_bookshelf", () -> new BlockItem(JUNGLE_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> ACACIA_BOOKSHELF_ITEM = ITEMS.register("acacia_bookshelf", () -> new BlockItem(ACACIA_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> DARK_OAK_BOOKSHELF_ITEM = ITEMS.register("dark_oak_bookshelf", () -> new BlockItem(DARK_OAK_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> MANGROVE_BOOKSHELF_ITEM = ITEMS.register("mangrove_bookshelf", () -> new BlockItem(MANGROVE_BOOKSHELF.get(), itemBuilder()));
-	public static final RegistryObject<Item> CHERRY_BOOKSHELF_ITEM = ITEMS.register("cherry_bookshelf", () -> new BlockItem(CHERRY_BOOKSHELF.get(), itemBuilder()));
+	public static final DeferredItem<BlockItem> OAK_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(OAK_BOOKSHELF);
+	public static final DeferredItem<BlockItem> SPRUCE_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(SPRUCE_BOOKSHELF);
+	public static final DeferredItem<BlockItem> BIRCH_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(BIRCH_BOOKSHELF);
+	public static final DeferredItem<BlockItem> JUNGLE_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(JUNGLE_BOOKSHELF);
+	public static final DeferredItem<BlockItem> ACACIA_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(ACACIA_BOOKSHELF);
+	public static final DeferredItem<BlockItem> DARK_OAK_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(DARK_OAK_BOOKSHELF);
+	public static final DeferredItem<BlockItem> MANGROVE_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(MANGROVE_BOOKSHELF);
+	public static final DeferredItem<BlockItem> CHERRY_BOOKSHELF_ITEM = ITEMS.registerSimpleBlockItem(CHERRY_BOOKSHELF);
 
-	public static final RegistryObject<Item> STRAWBERRY_CAKE_ITEM = ITEMS.register("strawberry_cake", () -> new BlockItem(STRAWBERRY_CAKE.get(), itemBuilder()));
-	public static final RegistryObject<Item> RED_PLUMBER_ITEM = ITEMS.register("red_plumber", () -> new BlockItem(RED_PLUMBER.get(), itemBuilder()));
-	public static final RegistryObject<Item> GREEN_PLUMBER_ITEM = ITEMS.register("green_plumber", () -> new BlockItem(GREEN_PLUMBER.get(), itemBuilder()));
-	public static final RegistryObject<Item> VILLAGE_HUT_2_ITEM = ITEMS.register("village_hut_2", () -> new BlockItem(VILLAGE_HUT_2.get(), itemBuilder()));
-	public static final RegistryObject<Item> VILLAGE_BLACKSMITH_ITEM = ITEMS.register("village_blacksmith", () -> new BlockItem(VILLAGE_BLACKSMITH.get(), itemBuilder()));
-	public static final RegistryObject<Item> VILLAGE_BUTCHER_ITEM = ITEMS.register("village_butcher", () -> new BlockItem(VILLAGE_BUTCHER.get(), itemBuilder()));
-
-	private static Item.Properties itemBuilder() {
-		return new Item.Properties();
-	}
+	public static final DeferredItem<BlockItem> STRAWBERRY_CAKE_ITEM = ITEMS.registerSimpleBlockItem(STRAWBERRY_CAKE);
+	public static final DeferredItem<BlockItem> RED_PLUMBER_ITEM = ITEMS.registerSimpleBlockItem(RED_PLUMBER);
+	public static final DeferredItem<BlockItem> GREEN_PLUMBER_ITEM = ITEMS.registerSimpleBlockItem(GREEN_PLUMBER);
+	public static final DeferredItem<BlockItem> VILLAGE_HUT_2_ITEM = ITEMS.registerSimpleBlockItem(VILLAGE_HUT_2);
+	public static final DeferredItem<BlockItem> VILLAGE_BLACKSMITH_ITEM = ITEMS.registerSimpleBlockItem(VILLAGE_BLACKSMITH);
+	public static final DeferredItem<BlockItem> VILLAGE_BUTCHER_ITEM = ITEMS.registerSimpleBlockItem(VILLAGE_BUTCHER);
 
 
-	public static final RegistryObject<CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("tab", () -> CreativeModeTab.builder()
+	public static final Supplier<CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("tab", () -> CreativeModeTab.builder()
 			.icon(() -> new ItemStack(RandomRegistry.VILLAGE_BUTCHER.get()))
 			.withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
 			.title(Component.translatable("itemGroup.randomdecorativethings"))

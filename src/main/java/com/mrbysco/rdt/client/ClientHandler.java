@@ -8,8 +8,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 public class ClientHandler {
 

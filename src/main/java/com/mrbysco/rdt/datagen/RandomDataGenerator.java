@@ -1,6 +1,9 @@
 package com.mrbysco.rdt.datagen;
 
 import com.mrbysco.rdt.Reference;
+import com.mrbysco.rdt.blocks.BarrelBlock;
+import com.mrbysco.rdt.blocks.BookshelfBlock;
+import com.mrbysco.rdt.blocks.CrateBlock;
 import com.mrbysco.rdt.init.RandomRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -14,16 +17,16 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.List;
 import java.util.Map;
@@ -104,7 +107,7 @@ public class RandomDataGenerator {
 
 			@Override
 			protected Iterable<Block> getKnownBlocks() {
-				return (Iterable<Block>) RandomRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+				return (Iterable<Block>) RandomRegistry.BLOCKS.getEntries().stream().map(holder -> (Block) holder.get())::iterator;
 			}
 		}
 	}
@@ -189,7 +192,7 @@ public class RandomDataGenerator {
 			buildCrate(RandomRegistry.CHERRY_CRATE, "cherry_planks");
 		}
 
-		protected void buildBarrel(RegistryObject<Block> registryObject, String texturePath) {
+		protected void buildBarrel(DeferredBlock<BarrelBlock> registryObject, String texturePath) {
 			ResourceLocation blockID = registryObject.getId();
 			ModelFile model;
 			if (blockID.getPath().equals("oak_barrel")) {
@@ -202,7 +205,7 @@ public class RandomDataGenerator {
 			getVariantBuilder(registryObject.get()).forAllStates(state -> ConfiguredModel.builder().modelFile(model).build());
 		}
 
-		protected void buildBookshelf(RegistryObject<Block> registryObject, String texturePath) {
+		protected void buildBookshelf(DeferredBlock<BookshelfBlock> registryObject, String texturePath) {
 			ResourceLocation blockID = registryObject.getId();
 			ModelFile model;
 			if (blockID.getPath().equals("oak_bookshelf")) {
@@ -215,7 +218,7 @@ public class RandomDataGenerator {
 			getVariantBuilder(registryObject.get()).forAllStates(state -> ConfiguredModel.builder().modelFile(model).build());
 		}
 
-		protected void buildCrate(RegistryObject<Block> registryObject, String texturePath) {
+		protected void buildCrate(DeferredBlock<CrateBlock> registryObject, String texturePath) {
 			ResourceLocation blockID = registryObject.getId();
 			ModelFile model;
 			if (blockID.getPath().equals("oak_crate")) {
